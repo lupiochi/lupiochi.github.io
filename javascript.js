@@ -1,28 +1,33 @@
-// Smooth Scroll
-document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+// Smooth scroll functionality
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
             behavior: 'smooth'
         });
     });
 });
 
-// Collapsible Sections
-document.querySelectorAll('.collapsible').forEach(button => {
-    button.addEventListener('click', function() {
-        this.classList.toggle('active');
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-            content.style.display = "none";
-        } else {
-            content.style.display = "block";
+// Highlight active section in sidebar based on scroll position
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.sidebar nav ul li');
+
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            current = section.getAttribute('id');
         }
     });
-});
 
-// Contact Form Submission
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Message sent successfully!');
+    navLinks.forEach(li => {
+        li.classList.remove('active');
+        if (li.querySelector('a').getAttribute('href').includes(current)) {
+            li.classList.add('active');
+        }
+    });
 });
