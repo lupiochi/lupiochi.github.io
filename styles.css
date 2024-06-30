@@ -32,9 +32,18 @@ body {
     margin-right: 20px;
 }
 
+.sidebar .avatar {
+    /* Style your avatar image here */
+}
+
+.sidebar-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
 .sidebar h1,
 .sidebar p {
-    text-align: center;
+    margin-bottom: 10px;
 }
 
 .sidebar nav ul {
@@ -86,31 +95,4 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
-}
-
-/* Additional styles for specific elements */
-.skills-list {
-    display: grid;
-    gap: 20px;
-}
-
-.skill-category {
-    border-left: 3px solid #333;
-    padding-left: 10px;
-}
-
-.experience-item {
-    margin-bottom: 40px;
-}
-
-.education-item {
-    margin-bottom: 40px;
-}
-
-#publications ul {
-    list-style: none;
-}
-
-#awards ul {
-    list-style: none;
 }
