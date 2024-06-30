@@ -32,8 +32,18 @@ body {
     margin-right: 20px;
 }
 
-.sidebar .avatar {
-    /* Style your avatar image here */
+.sidebar.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    overflow: hidden; 
+    margin: 20px auto;
+}
+
+.sidebar.avatar img {
+    width: 100%; /* Ensures the image fills its container */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes extra space below image */
 }
 
 .sidebar-content {
