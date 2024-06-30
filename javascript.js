@@ -13,21 +13,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Highlight active section in sidebar based on scroll position
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.sidebar nav ul li');
+    const sidebarLinks = document.querySelectorAll('.sidebar nav ul li a');
 
-    let current = '';
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
+        const sectionTop = section.offsetTop - 50;
         const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - sectionHeight / 3) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(li => {
-        li.classList.remove('active');
-        if (li.querySelector('a').getAttribute('href').includes(current)) {
-            li.classList.add('active');
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            sidebarLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === section.id) {
+                    link.classList.add('active');
+                }
+            });
         }
     });
 });
