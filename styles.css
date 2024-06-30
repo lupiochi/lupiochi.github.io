@@ -15,8 +15,6 @@ body {
 }
 
 .wrapper {
-    display: -webkit-box; /* For old versions of Edge */
-    display: -ms-flexbox; /* For Edge 12-15 */
     display: flex;
     max-width: 1200px;
     margin: 20px auto;
@@ -25,9 +23,8 @@ body {
 
 .sidebar {
     width: 250px;
-    position: -webkit-sticky; /* For old versions of Edge */
     position: sticky;
-    top: 20px; /* Adjust as needed for your layout */
+    top: 20px;
     height: fit-content;
     background-color: #333;
     color: #fff;
@@ -62,8 +59,6 @@ body {
 }
 
 .main-content {
-    -webkit-box-flex: 1; /* For old versions of Edge */
-    -ms-flex: 1; /* For Edge 12-15 */
     flex: 1;
 }
 
@@ -91,4 +86,31 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
+}
+
+/* Additional styles for specific elements */
+.skills-list {
+    display: grid;
+    gap: 20px;
+}
+
+.skill-category {
+    border-left: 3px solid #333;
+    padding-left: 10px;
+}
+
+.experience-item {
+    margin-bottom: 40px;
+}
+
+.education-item {
+    margin-bottom: 40px;
+}
+
+#publications ul {
+    list-style: none;
+}
+
+#awards ul {
+    list-style: none;
 }
