@@ -14,11 +14,11 @@
         <p>GitHub: <a href="https://github.com/lupiochi">github.com/lupiochi</a> | LinkedIn: <a href="https://linkedin.com/in/luiz-piochi">linkedin.com/in/luiz-piochi</a></p>
         <nav>
             <ul>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#awards">Awards</a></li>
+                <li><a href="#skills" class="smooth-scroll">Skills</a></li>
+                <li><a href="#experience" class="smooth-scroll">Experience</a></li>
+                <li><a href="#education" class="smooth-scroll">Education</a></li>
+                <li><a href="#publications" class="smooth-scroll">Publications</a></li>
+                <li><a href="#awards" class="smooth-scroll">Awards</a></li>
             </ul>
         </nav>
     </header>
@@ -103,8 +103,23 @@
         </ul>
     </section>
 
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
     <footer>
         <p>&copy; 2024 Luiz Felipe Piochi</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

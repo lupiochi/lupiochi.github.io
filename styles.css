@@ -1,15 +1,14 @@
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    color: #333;
 }
 
 header {
-    background: #333;
+    background-color: #333;
     color: #fff;
-    padding: 1rem 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -17,37 +16,73 @@ header h1 {
     margin: 0;
 }
 
-header p {
-    margin: 0.5rem 0 0;
-}
-
-nav ul {
+header nav ul {
     list-style: none;
     padding: 0;
 }
 
-nav ul li {
+header nav ul li {
     display: inline;
-    margin: 0 0.5rem;
+    margin: 0 10px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: #fff;
     text-decoration: none;
 }
 
 section {
-    padding: 2rem;
+    padding: 20px;
+    margin: 20px 0;
 }
 
-section h2 {
+h2 {
+    color: #333;
     border-bottom: 2px solid #333;
-    padding-bottom: 0.5rem;
+    padding-bottom: 5px;
 }
 
 footer {
-    background: #333;
+    background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 10px 0;
+}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input, form textarea, form button {
+    margin: 5px 0;
+}
+
+form input, form textarea {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
