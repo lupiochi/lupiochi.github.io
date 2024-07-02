@@ -165,16 +165,16 @@ body {
 }
 
 
-/* EXPERIENCE  */
+/* EXPERIENCE */
 #experience .content-container {
-    margin-left: 220px; /* Adjust based on header width */
+    margin-left: 220px; /* Default for desktop */
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.05);
     font-size: 1em;
     line-height: 1.4;
     color: #000000;
     border-radius: 8px;
-    width: calc(100% - 220px); /* Adjust based on header width */
+    width: calc(100% - 220px); /* Default for desktop */
     position: relative;
     min-height: 200px; /* Set a fixed height if needed */
 }
@@ -206,6 +206,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .education-cards {
@@ -223,6 +224,7 @@ body {
     width: 300px;
     padding: 20px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 10px; /* Add margin for better spacing on mobile */
 }
 
 .education-card:hover {
@@ -271,6 +273,70 @@ body {
 
     .education-card h3 {
         font-size: 1.2em; /* Slightly smaller headings on mobile */
+    }
+}
+
+/* Accordion Tab Styles */
+.accordeon {
+    display: flex;
+    flex-direction: column; /* Stack items vertically for simplicity */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.accordeon-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width for mobile */
+}
+
+.accordeon-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.accordeon-header {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #d3d3d3; /* Text color of closed tabs */
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 1em;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: left;
+    position: relative;
+}
+
+.accordeon-item:hover .accordeon-header,
+.accordeon-item.active .accordeon-header {
+    background-color: #12343b; /* Dark blue color */
+    color: #ffffff !important; /* Text color on hover and active */
+}
+
+.accordeon-item.active .accordeon-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #c89666; /* Subtle color bar */
+}
+
+.accordeon-content {
+    display: none; /* Hide content by default */
+    padding: 20px; /* Adjust padding */
+    margin-left: 0; /* Stack the content properly on small screens */
+}
+
+@media screen and (min-width: 769px) {
+    .accordeon-content {
+        max-height: 400px; /* Set a max height for PC */
+        overflow-y: auto; /* Allow scrolling if content exceeds max height */
     }
 }
 
@@ -326,6 +392,23 @@ body {
 .tab-content.active {
     display: block;
 }
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Compact text inside tabs */
+.tab-content p {
+    margin: 5px 0; /* Reduce margin for compact layout */
+    line-height: 1.4; /* Adjust line height for readability */
+}
+
 
 /* Fade-in animation */
 @keyframes fadeIn {
@@ -3594,6 +3677,11 @@ input, select, textarea {
     .header-image {
         margin-right: 0;
     }
+    /* Move hello animation to the left */
+    #hiword {
+        text-align: left;
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -3606,6 +3694,11 @@ input, select, textarea {
     #infinite-illustration {
         max-width: 100%;
     }
+    /* Further adjust hello animation position */
+    #hiword {
+        text-align: left;
+        margin-left: 10px;
+    }
 }
 
 @media screen and (max-width: 360px) {
@@ -3614,6 +3707,11 @@ input, select, textarea {
     }
     #header.alt {
         padding: 3.5em 1em 0.5em 1em;
+    }
+    /* Ensure hello animation stays to the left */
+    #hiword {
+        text-align: left;
+        margin-left: 10px;
     }
 }
 
