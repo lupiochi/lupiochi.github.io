@@ -26,15 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Initialize accordion for all sections
-    const sections = ["experience", "education"]; // Add more section IDs as needed
+    const sections = ["experience", "education"];
     sections.forEach(sectionId => {
         initializeAccordion(sectionId);
     });
 });
-
-
-// Tabbed education
 
 document.addEventListener("DOMContentLoaded", function () {
     const tabButtons = document.querySelectorAll(".tab-button");

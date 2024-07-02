@@ -1,11 +1,15 @@
 const canvas = document.getElementById('infinite-illustration');
 const ctx = canvas.getContext('2d');
 
-canvas.width = canvas.parentElement.clientWidth;
-canvas.height = canvas.parentElement.clientHeight;
+function resizeCanvas() {
+    canvas.width = canvas.parentElement.clientWidth;
+    canvas.height = canvas.parentElement.clientHeight;
+}
+
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
 
 const numNodes = 9;
-
 const nodes = [];
 
 for (let i = 0; i < numNodes; i++) {
@@ -34,11 +38,10 @@ function draw() {
         }
 
         ctx.beginPath();
-        ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 3);
+        ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
         ctx.fillStyle = node.color;
         ctx.fill();
 
-        // Draw connections
         nodes.forEach(otherNode => {
             if (node !== otherNode) {
                 let distance = Math.sqrt((node.x - otherNode.x) ** 2 + (node.y - otherNode.y) ** 2);
