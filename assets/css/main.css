@@ -17,7 +17,7 @@
     .header-image {
         order: 1;
         margin-top: 20px;
-        width: 80%;
+        width: 100%;
     }
 
     #infinite-illustration {
@@ -58,6 +58,26 @@
         width: 100%;
         padding: 20px;
     }
+	/* Header adjustments */
+	#header {
+		position: sticky;
+		top: 0;
+		left: 0;
+		z-index: 999; /* Ensure it stays on top */
+		background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+		padding: 20px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+	}
+
+	.header-content {
+		max-width: 80%; /* Adjust the max-width to move content a bit to the left */
+		margin: auto;
+	}
+
+	.header-image {
+		max-width: 80%; /* Ensure the image canvas does not exceed this width */
+		margin: auto;
+	}
 }
 
 /* Fixed Header */
