@@ -26,12 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Initialize accordion for all sections
     const sections = ["experience", "education"]; // Add more section IDs as needed
     sections.forEach(sectionId => {
         initializeAccordion(sectionId);
     });
 });
-
 
 
 // Tabbed education
