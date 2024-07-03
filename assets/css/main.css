@@ -59,6 +59,14 @@
         padding: 20px;
     }
 	
+	#hiword {
+		height: 2em; /* Set a fixed height based on the largest word */
+		line-height: 2em; /* Ensure vertical alignment */
+		overflow: hidden; /* Hide any overflow */
+		display: inline-block;
+		white-space: nowrap;
+	}
+	
     /* Add more sections as needed */
 }
 
