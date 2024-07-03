@@ -6,18 +6,9 @@ function resizeCanvas() {
     canvas.height = canvas.parentElement.clientHeight;
 }
 
-function shouldAnimate() {
-    return window.innerWidth >= 768; // Adjust the width threshold as needed
-}
-
 let animationFrameId;
 
 function draw() {
-    if (!shouldAnimate()) {
-        cancelAnimationFrame(animationFrameId);
-        return;
-    }
-
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     nodes.forEach(node => {
@@ -53,28 +44,26 @@ function draw() {
     animationFrameId = requestAnimationFrame(draw);
 }
 
-const numNodes = 9;
-const nodes = [];
-
-for (let i = 0; i < numNodes; i++) {
-    nodes.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: Math.random() * 2 - 1,
-        vy: Math.random() * 2 - 1,
-        radius: Math.random() * 5 + 3,
-        color: 'rgba(255, 255, 255, 0.9)'
-    });
+function createNodes(numNodes, isMobile) {
+    nodes.length = 0;
+    for (let i = 0; i < numNodes; i++) {
+        nodes.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            vx: Math.random() * 2 - 1,
+            vy: Math.random() * 2 - 1,
+            radius: Math.random() * (isMobile ? 3 : 5) + (isMobile ? 1 : 3),
+            color: 'rgba(255, 255, 255, 0.9)'
+        });
+    }
 }
 
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
-window.addEventListener('resize', () => {
-    if (shouldAnimate()) {
-        draw(); // Restart the animation if resizing to a larger screen
-    }
-});
 
-if (shouldAnimate()) {
-    draw(); // Start the animation initially if on a large screen
-}
+// Check if the device is mobile and create nodes accordingly
+const isMobile = window.innerWidth <= 768;
+createNodes(isMobile ? 5 : 9, isMobile);
+
+// Start the animation
+draw();
