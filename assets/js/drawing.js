@@ -1,12 +1,23 @@
 const canvas = document.getElementById('infinite-illustration');
 const ctx = canvas.getContext('2d');
 
-function resizeCanvas() {
-    canvas.width = canvas.parentElement.clientWidth;
-    canvas.height = canvas.parentElement.clientHeight;
-}
+canvas.width = canvas.parentElement.clientWidth;
+canvas.height = canvas.parentElement.clientHeight;
 
-let animationFrameId;
+const numNodes = 9;
+
+const nodes = [];
+
+for (let i = 0; i < numNodes; i++) {
+    nodes.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: Math.random() * 2 - 1,
+        vy: Math.random() * 2 - 1,
+        radius: Math.random() * 5 + 3,
+        color: 'rgba(255, 255, 255, 0.9)'
+    });
+}
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -23,10 +34,11 @@ function draw() {
         }
 
         ctx.beginPath();
-        ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 3);
         ctx.fillStyle = node.color;
         ctx.fill();
 
+        // Draw connections
         nodes.forEach(otherNode => {
             if (node !== otherNode) {
                 let distance = Math.sqrt((node.x - otherNode.x) ** 2 + (node.y - otherNode.y) ** 2);
@@ -41,29 +53,7 @@ function draw() {
         });
     });
 
-    animationFrameId = requestAnimationFrame(draw);
+    requestAnimationFrame(draw);
 }
 
-function createNodes(numNodes, isMobile) {
-    nodes.length = 0;
-    for (let i = 0; i < numNodes; i++) {
-        nodes.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            vx: Math.random() * 2 - 1,
-            vy: Math.random() * 2 - 1,
-            radius: Math.random() * (isMobile ? 3 : 5) + (isMobile ? 1 : 3),
-            color: 'rgba(255, 255, 255, 0.9)'
-        });
-    }
-}
-
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-
-// Check if the device is mobile and create nodes accordingly
-const isMobile = window.innerWidth <= 768;
-createNodes(isMobile ? 5 : 9, isMobile);
-
-// Start the animation
 draw();

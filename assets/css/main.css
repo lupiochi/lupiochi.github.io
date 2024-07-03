@@ -6,6 +6,59 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+/* General Mobile Adjustments */
+@media screen and (max-width: 768px) {
+    /* Move canvas below the text in the header */
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-image {
+        order: 1;
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    #infinite-illustration {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Education Section */
+    .tabs {
+        display: flex;
+        flex-direction: column;
+    }
+    .tab-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+    .tab-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .tab-content {
+        padding: 10px;
+    }
+
+    /* Experience Section */
+    .experience-container {
+        flex-direction: column;
+    }
+    .accordeon-items {
+        width: 100%;
+    }
+    .accordeon-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+    #experience .content-container {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+}
 
 /* Fixed Header */
 #fixed-header {
@@ -16,7 +69,6 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.35);
     z-index: 1000; /* Ensure it stays on top */
     transition: background-color 0.3s ease, padding 0.3s ease;
-    height: 60px; /* Set default height */
 }
 
 #fixed-header .container {
@@ -55,30 +107,7 @@ body {
     padding-top: 60px; /* Adjust based on header height */
 }
 
-/* Media Queries for Mobile Devices */
-@media screen and (max-width: 480px) {
-    #fixed-header .name {
-        font-size: 1em; /* Smaller font size on mobile */
-    }
 
-    #fixed-header .icons a {
-        font-size: 0.4em; /* Smaller icons on mobile */
-        padding: 3px; /* Reduce padding to save space */
-    }
-
-    #fixed-header .container {
-        padding: 5px 10px; /* Less padding to save horizontal space */
-    }
-
-    #fixed-header {
-        padding: 5px 0; /* Reduce top and bottom padding */
-        height: 50px; /* Reduce the height of the header */
-    }
-
-    body {
-        padding-top: 50px; /* Adjust body padding to match new header height */
-    }
-}
 
 /* Accordion Tab Styles */
 .accordeon {
@@ -98,30 +127,6 @@ body {
 
 .accordeon-item {
     border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-@media screen and (max-width: 768px) {
-    .accordeon-items {
-        width: 100%; /* Full width on smaller screens */
-    }
-
-    .accordeon-content {
-        padding: 20px; /* Adjust padding */
-        margin-left: 0; /* Stack the content properly on small screens */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .accordeon-header {
-        font-size: 0.9em; /* Smaller font size for mobile */
-        padding: 8px 10px; /* Adjust padding for easier tapping */
-    }
-
-    .accordeon-content {
-        padding: 15px; /* Sufficient padding for readability */
-        margin-left: 0; /* Ensure content does not shift offscreen */
-        display: block; /* Consider always displaying content or making it easier to toggle */
-    }
 }
 
 .experience-container {
@@ -160,21 +165,22 @@ body {
 
 .accordeon-content {
     display: none; /* Hide content by default */
-    padding: 50px;
-    margin-left: 500px;
+	padding: 50px;
+	margin-left: 500px;
 }
 
 
-/* EXPERIENCE */
+/* EXPERIENCE  */
+
 #experience .content-container {
-    margin-left: 220px; /* Default for desktop */
+    margin-left: 220px; /* Adjust based on header width */
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.05);
     font-size: 1em;
     line-height: 1.4;
     color: #000000;
     border-radius: 8px;
-    width: calc(100% - 220px); /* Default for desktop */
+    width: calc(100% - 220px); /* Adjust based on header width */
     position: relative;
     min-height: 200px; /* Set a fixed height if needed */
 }
@@ -186,27 +192,12 @@ body {
     text-align: left; /* Ensure text alignment */
 }
 
-@media screen and (max-width: 768px) {
-    #experience .content-container {
-        margin-left: 0; /* Remove margin on smaller screens */
-        width: 100%; /* Full width on smaller screens */
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #experience .content-container {
-        font-size: 0.9em; /* Slightly smaller font size for mobile */
-        padding: 10px 5px; /* Adjust padding for mobile */
-    }
-}
-
 /* EDUCATION */
+
 .education-container {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .education-cards {
@@ -224,7 +215,6 @@ body {
     width: 300px;
     padding: 20px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    margin: 10px; /* Add margin for better spacing on mobile */
 }
 
 .education-card:hover {
@@ -253,91 +243,6 @@ body {
 .education-card:hover .progress {
     background-color: #c89666;
     color: #ffffff !important; /* Make text color white */
-}
-
-@media screen and (max-width: 768px) {
-    .education-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .education-card {
-        width: 90%; /* Make cards take up more space on smaller screens */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .education-card {
-        padding: 15px; /* Adjust padding for mobile */
-    }
-
-    .education-card h3 {
-        font-size: 1.2em; /* Slightly smaller headings on mobile */
-    }
-}
-
-/* Accordion Tab Styles */
-.accordeon {
-    display: flex;
-    flex-direction: column; /* Stack items vertically for simplicity */
-    margin-bottom: 20px;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-.accordeon-items {
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* Full width for mobile */
-}
-
-.accordeon-item {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-.accordeon-header {
-    background-color: rgba(255, 255, 255, 0.15);
-    color: #d3d3d3; /* Text color of closed tabs */
-    cursor: pointer;
-    padding: 10px 15px;
-    font-size: 1em;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    text-align: left;
-    position: relative;
-}
-
-.accordeon-item:hover .accordeon-header,
-.accordeon-item.active .accordeon-header {
-    background-color: #12343b; /* Dark blue color */
-    color: #ffffff !important; /* Text color on hover and active */
-}
-
-.accordeon-item.active .accordeon-header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #c89666; /* Subtle color bar */
-}
-
-.accordeon-content {
-    display: none; /* Hide content by default */
-    padding: 20px; /* Adjust padding */
-    margin-left: 0; /* Stack the content properly on small screens */
-}
-
-@media screen and (min-width: 769px) {
-    .accordeon-content {
-        max-height: 400px; /* Set a max height for PC */
-        overflow-y: auto; /* Allow scrolling if content exceeds max height */
-    }
 }
 
 /* Tabbed Education */
@@ -409,23 +314,6 @@ body {
     line-height: 1.4; /* Adjust line height for readability */
 }
 
-
-/* Fade-in animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Compact text inside tabs */
-.tab-content p {
-    margin: 5px 0; /* Reduce margin for compact layout */
-    line-height: 1.4; /* Adjust line height for readability */
-}
-
 /* CV Button Style */
 .cv-button {
     -moz-appearance: none;
@@ -445,7 +333,7 @@ body {
     line-height: 2em;
     min-width: 6em;
     padding: 0 0.75em;
-    font-size: 0.75em;
+	font-size: 0.75em;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
@@ -471,213 +359,6 @@ body {
 .cv-button:active {
     background-color: #0f2a2f; /* Active color */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* General Mobile Styles */
-@media screen and (max-width: 768px) {
-
-    /* EXPERIENCE */
-    #experience .content-container {
-        margin: 0; /* Remove left margin */
-        width: 100%; /* Full width */
-        padding: 10px; /* Simple padding */
-        background-color: rgba(255, 255, 255, 0.05);
-        font-size: 1em; /* Normal font size */
-        line-height: 1.4;
-        color: #000000;
-        border-radius: 8px;
-        min-height: auto; /* Allow flexible height */
-    }
-
-    #experience .content-container p {
-        margin: 0;
-        padding: 5px 0;
-        color: #000000;
-        text-align: left;
-    }
-
-    .accordeon {
-        display: block; /* Stack items vertically */
-        margin-bottom: 20px;
-        border-radius: 8px;
-        overflow: hidden;
-        background-color: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.35);
-    }
-
-    .accordeon-items {
-        width: 100%;
-    }
-
-    .accordeon-item {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-    }
-
-    .accordeon-header {
-        background-color: rgba(255, 255, 255, 0.15);
-        color: #d3d3d3;
-        cursor: pointer;
-        padding: 10px;
-        font-size: 1em;
-        font-weight: 400;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        text-align: left;
-    }
-
-    .accordeon-item.active .accordeon-header {
-        background-color: #12343b;
-        color: #ffffff !important;
-    }
-
-    .accordeon-content {
-        display: block;
-        padding: 10px;
-        margin-left: 0;
-    }
-
-    /* EDUCATION */
-    .education-container {
-        display: block; /* Stack items vertically */
-        margin-top: 20px;
-        padding: 0 10px;
-    }
-
-    .education-cards {
-        display: block;
-        gap: 10px;
-    }
-
-    .education-card {
-        background-color: #f5f5f5;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        width: 100%; /* Full width on mobile */
-        padding: 15px;
-        margin-bottom: 10px;
-        transition: none; /* No transition on mobile */
-    }
-
-    .education-card h3 {
-        margin-top: 0;
-        font-size: 1.2em; /* Slightly smaller headings */
-    }
-
-    .progress-bar {
-        background-color: #ddd;
-        border-radius: 5px;
-        overflow: hidden;
-        margin-top: 10px;
-    }
-
-    .progress {
-        height: 10px;
-        background-color: #c89666;
-        border-radius: 5px;
-        transition: none; /* No transition on mobile */
-    }
-
-    /* Move the infinite illustration down on mobile */
-    #header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #infinite-illustration-container {
-        order: 2; /* Place it after the text */
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    #infinite-illustration {
-        width: 100%;
-        max-width: 300px; /* Adjust max-width as needed */
-    }
-
-    /* Reduce space between text and sections */
-    #header p {
-        margin-bottom: 10px; /* Adjust margin as needed */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #experience .content-container {
-        padding: 10px 5px;
-    }
-
-    .accordeon-header {
-        font-size: 0.9em;
-        padding: 8px;
-    }
-
-    .accordeon-content {
-        padding: 10px 5px;
-    }
-
-    .education-card {
-        padding: 10px;
-    }
-
-    .education-card h3 {
-        font-size: 1.1em;
-    }
-
-    #infinite-illustration-container {
-        margin-top: 10px; /* Further reduce top margin */
-    }
-
-    #infinite-illustration {
-        max-width: 250px; /* Further adjust max-width if needed */
-    }
-}
-
-
-    .progress-bar {
-        background-color: #ddd;
-        border-radius: 5px;
-        overflow: hidden;
-        margin-top: 10px;
-    }
-
-    .progress {
-        height: 10px;
-        background-color: #c89666;
-        border-radius: 5px;
-        transition: width 0.5s ease-in-out;
-    }
-
-    .education-card:hover .progress {
-        background-color: #c89666;
-        color: #ffffff !important;
-    }
-
-
-/* Additional Mobile-Specific Adjustments */
-@media screen and (max-width: 480px) {
-
-    #experience .content-container {
-        padding: 10px 5px;
-    }
-
-    .accordeon-header {
-        font-size: 0.9em;
-        padding: 8px;
-    }
-
-    .accordeon-content {
-        padding: 10px 5px;
-    }
-
-    .education-card {
-        padding: 10px;
-    }
-
-    .education-card h3 {
-        font-size: 1.1em;
-    }
 }
 
 
@@ -3770,20 +3451,19 @@ input, select, textarea {
 	.spotlight .image {
 		border-color: rgba(255, 255, 255, 0.35);
 	}
+
 /* Header */
 .header-content {
     flex: 1;
     text-align: left;
-    font-size: 1.25em;
-    margin-left: 0px;
-	justify-content: left;
+	font-size: 1.25em;
+	margin-left: 100px;
 }
 
 .header-image {
     margin-right: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	align-items: right;
+	justify-content: space-between
 }
 
 .header-image img {
@@ -3791,150 +3471,150 @@ input, select, textarea {
     border-radius: 50%; 
 }
 
-#infinite-illustration {
-    width: 100%;
-    max-width: 500px;
-    height: 200px;
-    border: 1px;
-}
+	#infinite-illustration {
+		width: 500px;
+		height: 200px;
+		border: 1px;
+	}
 
-#header {
-    padding: 0;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-}
+	#header {
+		padding: auto ;
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+	}
 
-#header h1 {
-    margin: 0 0 0.25em 0;
-}
+		#header h1 {
+			margin: 0 0 0.25em 0;
+		}
 
-#header p {
-    font-size: 1.25em;
-    letter-spacing: -0.025em;
-}
+		#header p {
+			font-size: 1.25em;
+			letter-spacing: -0.025em;
+		}
 
-#header.alt {
-    padding: 7em 5em 4em 5em;
-}
+		#header.alt {
+			padding: 7em 5em 4em 5em ;
+		}
 
-#header.alt h1 {
-    font-size: 3.25em;
-}
+			#header.alt h1 {
+				font-size: 3.25em;
+			}
 
-#header.alt > * {
-    transition: opacity 3s ease;
-    transition-delay: 0.5s;
-    opacity: 1;
-}
+			#header.alt > * {
+				-moz-transition: opacity 3s ease;
+				-webkit-transition: opacity 3s ease;
+				-ms-transition: opacity 3s ease;
+				transition: opacity 3s ease;
+				-moz-transition-delay: 0.5s;
+				-webkit-transition-delay: 0.5s;
+				-ms-transition-delay: 0.5s;
+				transition-delay: 0.5s;
+				opacity: 1;
+			}
 
-#header.alt .logo {
-    transition: opacity 1.25s ease, transform 0.5s ease;
-    display: block;
-    margin: 0 0 1.5em 0;
-}
+			#header.alt .logo {
+				-moz-transition: opacity 1.25s ease, -moz-transform 0.5s ease;
+				-webkit-transition: opacity 1.25s ease, -webkit-transform 0.5s ease;
+				-ms-transition: opacity 1.25s ease, -ms-transform 0.5s ease;
+				transition: opacity 1.25s ease, transform 0.5s ease;
+				-moz-transition-delay: 0s;
+				-webkit-transition-delay: 0s;
+				-ms-transition-delay: 0s;
+				transition-delay: 0s;
+				display: block;
+				margin: 0 0 1.5em 0;
+			}
 
-#header.alt .logo img {
-    display: block;
-    margin: 0 auto;
-    max-width: 75%;
-}
+				#header.alt .logo img {
+					display: block;
+					margin: 0 auto;
+					max-width: 75%;
+				}
 
-/* Media Queries */
-@media screen and (max-width: 1280px) {
-    #header {
-        padding: 4em 4em 0.1em 4em;
-    }
-    #header.alt {
-        padding: 6em 4em 3em 4em;
-    }
-}
+		@media screen and (max-width: 1280px) {
 
-@media screen and (max-width: 980px) {
-    #header {
-        padding: 4em 3em 0.1em 3em;
-    }
-    #header.alt {
-        padding: 5em 3em 2em 3em;
-    }
-}
+			#header {
+				padding: 4em 4em 0.1em 4em ;
+			}
 
-@media screen and (max-width: 736px) {
-    #header {
-        padding: 3em 2em 0.1em 2em;
-        flex-direction: column;
-        align-items: center;
-    }
-    #header p {
-        font-size: 1em;
-        letter-spacing: 0;
-    }
-    #header p br {
-        display: none;
-    }
-    #header.alt {
-        padding: 4em 2em 1em 2em;
-    }
-    #header.alt h1 {
-        font-size: 2.5em;
-    }
-    .header-content {
-        margin-left: 0;
-        text-align: center;
-    }
-    .header-image {
-        margin-right: 0;
-    }
-    /* Move hello animation to the left */
-    #hiword {
-        text-align: left;
-        margin-left: 0;
-    }
-}
+				#header.alt {
+					padding: 6em 4em 3em 4em ;
+				}
 
-@media screen and (max-width: 768px) {
-    #header {
-        padding: 3em 1.5em 0.1em 1.5em;
-    }
-    #header.alt {
-        padding: 4em 1.5em 1em 1.5em;
-    }
-    #infinite-illustration {
-        max-width: 100%;
-    }
+		}
 
-	#header p {
-        margin-bottom: 1px; /* Reduce bottom margin to decrease space */
-    }
+		@media screen and (max-width: 980px) {
 
-    /* Further adjust hello animation position */
-    #hiword {
-        text-align: left;
-        margin-left: 10px;
-    }
-}
+			#header {
+				padding: 4em 3em 0.1em 3em ;
+			}
 
-@media screen and (max-width: 360px) {
-    #header {
-        padding: 2.5em 1em 0.1em 1em;
-    }
-    #header.alt {
-        padding: 3.5em 1em 0.5em 1em;
-    }
-    /* Ensure hello animation stays to the left */
-    #hiword {
-        text-align: left;
-        margin-left: 10px;
-    }
-}
+				#header.alt {
+					padding: 5em 3em 2em 3em ;
+				}
 
-body.is-preload #header.alt > * {
-    opacity: 0;
-}
+		}
 
-body.is-preload #header.alt .logo {
-    transform: scale(0.8) rotate(-30deg);
-}
+		@media screen and (max-width: 736px) {
+
+			#header {
+				padding: 3em 2em 0.1em 2em ;
+			}
+
+				#header p {
+					font-size: 1em;
+					letter-spacing: 0;
+				}
+
+					#header p br {
+						display: none;
+					}
+
+				#header.alt {
+					padding: 4em 2em 1em 2em ;
+				}
+
+					#header.alt h1 {
+						font-size: 2.5em;
+					}
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+			#header {
+				padding: 3em 1.5em 0.1em 1.5em ;
+			}
+
+				#header.alt {
+					padding: 4em 1.5em 1em 1.5em ;
+				}
+
+		}
+
+		@media screen and (max-width: 360px) {
+
+			#header {
+				padding: 2.5em 1em 0.1em 1em ;
+			}
+
+				#header.alt {
+					padding: 3.5em 1em 0.5em 1em ;
+				}
+
+		}
+
+		body.is-preload #header.alt > * {
+			opacity: 0;
+		}
+
+		body.is-preload #header.alt .logo {
+			-moz-transform: scale(0.8) rotate(-30deg);
+			-webkit-transform: scale(0.8) rotate(-30deg);
+			-ms-transform: scale(0.8) rotate(-30deg);
+			transform: scale(0.8) rotate(-30deg);
+		}
 
 /* Nav */
 
