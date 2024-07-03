@@ -3,7 +3,6 @@ const theBox = document.getElementById("hiword");
 let idx = 0;
 
 const writeBox = (word) => {
-  theBox.style.height = theBox.offsetHeight + 'px'; // Fix height to prevent shaking
   const pieces = word.split("");
   let letterIndex = 0;
   const writeLetters = () => {
