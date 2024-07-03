@@ -1,5 +1,4 @@
-const theWords = ["Hi", "Bonjour", "Hallo", "Hola", "Kaixo", "Olá"]
-;
+const theWords = ["Hi", "Bonjour", "Hallo", "Hola", "Kaixo", "Olá"];
 const theBox = document.getElementById("hiword");
 let idx = 0;
 
@@ -8,7 +7,7 @@ const writeBox = (word) => {
   let letterIndex = 0;
   const writeLetters = () => {
     if (letterIndex === pieces.length + 1) {
-      setTimeout(switchWord, 1000); // Wait 2 seconds before switching to the next word
+      setTimeout(switchWord, 1000); // Wait 1 second before switching to the next word
     } else {
       theBox.innerHTML = pieces.slice(0, letterIndex).join("");
       letterIndex++;
