@@ -59,26 +59,6 @@
         padding: 20px;
     }
 	
-    /* Ensure #hiword maintains its dimensions */
-    #hiword {
-        display: inline-block;
-        width: 120px; /* Adjust width based on the longest word */
-        height: 1.2em; /* Adjust height as needed */
-        overflow: hidden;
-        white-space: nowrap;
-        text-align: center;
-        vertical-align: middle;
-    }
-	
-    /* Ensure the entire h1 is wider but fixed */
-    h1 {
-        width: 90%; /* Adjust this width as needed */
-        max-width: 600px; /* Optional: set a max width */
-        text-align: center;
-        margin: 0 auto; /* Center the h1 */
-    }
-	
-	
     /* Add more sections as needed */
 }
 
