@@ -17,12 +17,18 @@
     .header-image {
         order: 1;
         margin-top: 20px;
-        width: 80%;
+        width: 100%;
     }
 
     #infinite-illustration {
         width: 100% !important;
         height: auto !important;
+    }
+
+    /* Hello Section */
+    .header-content h1 {
+        width: 90%; /* Adjust width to prevent narrowing */
+        text-align: center;
     }
 
     /* Education Section */
@@ -51,12 +57,12 @@
     }
     .accordeon-content {
         margin-left: 0;
-        padding: 20px;
+        padding: 10px; /* Adjust padding for mobile */
     }
     #experience .content-container {
         margin-left: 0;
         width: 100%;
-        padding: 20px;
+        padding: 10px;
     }
 }
 
