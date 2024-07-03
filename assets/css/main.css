@@ -6,367 +6,6 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-/* General Mobile Adjustments */
-@media screen and (max-width: 768px) {
-    /* Move canvas below the text in the header */
-    .header-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .header-image {
-        order: 1;
-        margin-top: 20px;
-        width: 100%;
-    }
-
-    #infinite-illustration {
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    /* Hello Section */
-    .header-content h1 {
-        width: 90%; /* Adjust width to prevent narrowing */
-        text-align: center;
-    }
-
-    /* Education Section */
-    .tabs {
-        display: flex;
-        flex-direction: column;
-    }
-    .tab-buttons {
-        display: flex;
-        flex-direction: column;
-    }
-    .tab-button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    .tab-content {
-        padding: 10px;
-    }
-
-    /* Experience Section */
-    .experience-container {
-        flex-direction: column;
-    }
-    .accordeon-items {
-        width: 100%;
-    }
-    .accordeon-content {
-        margin-left: 0;
-        padding: 10px; /* Adjust padding for mobile */
-    }
-    #experience .content-container {
-        margin-left: 0;
-        width: 100%;
-        padding: 10px;
-    }
-}
-
-/* Fixed Header */
-#fixed-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-    z-index: 1000; /* Ensure it stays on top */
-    transition: background-color 0.3s ease, padding 0.3s ease;
-}
-
-#fixed-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px; /* Adjust padding as needed */
-}
-
-#fixed-header .name {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #ffffff; /* Text color */
-}
-
-#fixed-header .icons {
-    display: flex;
-    gap: 1px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-#fixed-header .icons li {
-    margin: 0;
-}
-
-#fixed-header .icons a {
-    font-size: 0.5em; /* Make icons smaller */
-    padding: 5px; /* Adjust padding to make them more compact */
-    color: #ffffff; /* Icon color */
-}
-
-/* Ensure page content doesn't hide behind the fixed header */
-body {
-    padding-top: 60px; /* Adjust based on header height */
-}
-
-
-
-/* Accordion Tab Styles */
-.accordeon {
-    display: flex;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-.accordeon-items {
-    display: flex;
-    flex-direction: column;
-    width: 220px; /* Set a fixed width for the accordion items */
-}
-
-.accordeon-item {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-.experience-container {
-    display: flex;
-}
-
-.accordeon-header {
-    background-color: rgba(255, 255, 255, 0.15);
-    color: #d3d3d3; /* Text color of closed tabs */
-    cursor: pointer;
-    padding: 10px 15px;
-    font-size: 1em;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    text-align: left;
-    position: relative;
-}
-
-.accordeon-item:hover .accordeon-header,
-.accordeon-item.active .accordeon-header {
-    background-color: #12343b; /* Dark blue color */
-    color: #ffffff !important; /* Text color on hover and active */
-}
-
-.accordeon-item.active .accordeon-header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #c89666; /* Subtle color bar */
-}
-
-.accordeon-content {
-    display: none; /* Hide content by default */
-	padding: 50px;
-	margin-left: 500px;
-}
-
-
-/* EXPERIENCE  */
-
-#experience .content-container {
-    margin-left: 220px; /* Adjust based on header width */
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.05);
-    font-size: 1em;
-    line-height: 1.4;
-    color: #000000;
-    border-radius: 8px;
-    width: calc(100% - 220px); /* Adjust based on header width */
-    position: relative;
-    min-height: 200px; /* Set a fixed height if needed */
-}
-
-#experience .content-container p {
-    margin: 0; /* Remove margin for smooth opening/closing */
-    padding: 5px 0; /* Use padding instead */
-    color: #000000;
-    text-align: left; /* Ensure text alignment */
-}
-
-/* EDUCATION */
-
-.education-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.education-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.education-card {
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px;
-    padding: 20px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.education-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-.education-card h3 {
-    margin-top: 0;
-}
-
-.progress-bar {
-    background-color: #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-top: 10px;
-}
-
-.progress {
-    height: 10px;
-    background-color: #c89666;
-    border-radius: 5px;
-    transition: width 0.5s ease-in-out;
-}
-
-.education-card:hover .progress {
-    background-color: #c89666;
-    color: #ffffff !important; /* Make text color white */
-}
-
-/* Tabbed Education */
-.tabs {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.tab-buttons {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-.tab-button {
-    background-color: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    color: #f0f0f0;
-    border-radius: 8px;
-    font-size: 1em;
-    font-weight: 400;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.tab-button.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #c89666; /* Subtle color bar */
-}
-
-.tab-content {
-    display: none;
-    padding: 10px 15px; /* More compact padding */
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Compact text inside tabs */
-.tab-content p {
-    margin: 5px 0; /* Reduce margin for compact layout */
-    line-height: 1.4; /* Adjust line height for readability */
-}
-
-/* CV Button Style */
-.cv-button {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    -moz-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    -ms-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border-radius: 5px;
-    border: 2px solid transparent;
-    cursor: pointer;
-    display: inline-block;
-    font-weight: 400;
-    height: 2em;
-    line-height: 2em;
-    min-width: 6em;
-    padding: 0 0.75em;
-	font-size: 0.75em;
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap;
-    background-color: #53504e; /* Base color */
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.cv-button:hover {
-    background-color: #12343b; /* Hover color */
-    color: #ffffff !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.cv-button:focus {
-    outline: none;
-    border-color: #12343b; /* Focus color */
-}
-
-.cv-button:active {
-    background-color: #0f2a2f; /* Active color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -2857,29 +2496,6 @@ input, select, textarea {
 		color: #ffffff;
 	}
 
-/* Custom bullet points using Unicode characters */
-.custom-list {
-    padding-left: 0; /* Remove padding for the main list, added padding to individual items */
-}
-
-/* Custom bullet points using Unicode characters */
-.custom-list.arrow li {
-    position: relative;
-    padding-left: 20px; /* Add padding to accommodate the bullet */
-    list-style-type: none; /* Remove default bullets */
-}
-
-.custom-list.arrow li::before {
-    content: "▷"; /* Unicode character for arrow */
-    position: absolute;
-    left: 0; /* Position the bullet correctly */
-    color: darkblue; /* Customize color */
-    font-size: 16px; /* Adjust size as needed */
-    line-height: 1; /* Ensure it aligns vertically with the text */
-    top: 50%; /* Center the bullet vertically */
-    transform: translateY(-50%); /* Adjust vertical alignment */
-}
-
 /* Actions */
 
 	ul.actions {
@@ -3026,11 +2642,12 @@ input, select, textarea {
 	}
 
 	header.major {
-		margin-bottom: 3em;
+		margin-bottom: 1em;
 	}
 
 		header.major h2 {
 			font-size: 2em;
+			margin-top: 0.1em;
 		}
 
 			header.major h2:after {
@@ -3038,7 +2655,7 @@ input, select, textarea {
 				content: '';
 				width: 3.25em;
 				height: 2px;
-				margin: 0.7em 0 1em 0;
+				margin: 0.1em 0 0.1em 0;
 				border-radius: 2px;
 			}
 
@@ -3995,7 +3612,7 @@ input, select, textarea {
 		}
 
 		#main > .main {
-			padding: 5em 5em 3em 5em ;
+			padding: 2em 5em 3em 5em ;
 			border-top: solid 1px #dddddd;
 		}
 
@@ -4197,3 +3814,581 @@ input, select, textarea {
 			}
 
 		}
+
+
+		.portfolio-container {
+			padding: 2em 0;
+		}
+		
+		.portfolio-grid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+		
+		.portfolio-item {
+			width: 30%;
+			margin: 1em 0;
+			text-align: center;
+		}
+		
+		.portfolio-image {
+			width: 100%;
+			height: auto;
+			border-radius: 8px;
+		}
+		
+		.portfolio-details {
+			display: none;
+			margin-top: 1em;
+		}
+		
+		.button.small {
+			font-size: 0.8em;
+			padding: 0em 1em;
+		}
+		
+		@media screen and (max-width: 980px) {
+			.portfolio-item {
+				width: 45%;
+			}
+		}
+		
+		@media screen and (max-width: 736px) {
+			.portfolio-item {
+				width: 100%;
+			}
+		}
+		
+
+/* Certifications Section */
+.certifications-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.certification-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    transition: transform 0.1s;
+}
+
+.certification-item:hover {
+    transform: scale(1.01);
+}
+
+.certification-item h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.certification-item p {
+    margin: 5px 0 0 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.certification-item a {
+    color: #1a73e8;
+    text-decoration: none;
+    margin-top: 5px;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+.certification-item a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 820px) {
+    .certifications-container {
+        padding: 5px;
+    }
+
+    .certification-item {
+        padding: 8px;
+    }
+
+    .certification-item h3 {
+        font-size: 1em;
+    }
+
+    .certification-item p {
+        font-size: 0.8em;
+    }
+
+    .certification-item a {
+        font-size: 0.8em;
+    }
+}
+
+
+/* Publications Section */
+.publications-container {
+    padding: 20px;
+    background-color: rgba(18, 52, 59, 0.3)	;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.publications-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.publication-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.publication-item p {
+    margin: 0;
+    color: #555;
+}
+
+.publication-item a {
+    color: #1a73e8;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.publication-item a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 820px) {
+    .publication-item {
+        padding: 10px;
+    }
+}
+
+/* Awards Section */
+.awards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.award-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    transition: transform 0.2s;
+}
+
+.award-item:hover {
+    transform: scale(1.02);
+}
+
+.award-item h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.award-item p {
+    margin: 10px 0 0 0;
+    color: #555;
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 820px) {
+    .awards-container {
+        padding: 10px;
+    }
+
+    .award-item {
+        padding: 10px;
+    }
+
+    .award-item h3 {
+        font-size: 1.2em;
+    }
+
+    .award-item p {
+        font-size: 1em;
+    }
+}
+		
+/* Fixed Header */
+#fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    z-index: 1000; /* Ensure it stays on top */
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+#fixed-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+}
+
+#fixed-header .name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff; /* Text color */
+}
+
+#fixed-header .icons {
+    display: flex;
+    gap: 1px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#fixed-header .icons li {
+    margin: 0;
+}
+
+#fixed-header .icons a {
+    font-size: 0.6em; /* Make icons smaller */
+    padding: 5px; /* Adjust padding to make them more compact */
+    color: #ffffff; /* Icon color */
+}
+
+/* Ensure page content doesn't hide behind the fixed header */
+body {
+    padding-top: 60px; /* Adjust based on header height */
+}
+
+
+
+/* Accordion Tab Styles */
+.accordeon {
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.accordeon-items {
+    display: flex;
+    flex-direction: column;
+    width: 220px; /* Set a fixed width for the accordion items */
+}
+
+.accordeon-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.experience-container {
+    display: flex;
+}
+
+.accordeon-header {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #d3d3d3; /* Text color of closed tabs */
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 1em;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: left;
+    position: relative;
+}
+
+.accordeon-item:hover .accordeon-header,
+.accordeon-item.active .accordeon-header {
+    background-color: #12343b; /* Dark blue color */
+    color: #ffffff !important; /* Text color on hover and active */
+}
+
+.accordeon-item.active .accordeon-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #c89666; /* Subtle color bar */
+}
+
+.accordeon-content {
+    display: none; /* Hide content by default */
+	padding: 50px;
+	margin-left: 500px;
+}
+
+
+/* EXPERIENCE  */
+
+#experience .content-container {
+    margin-left: 220px; /* Adjust based on header width */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    font-size: 1em;
+    line-height: 1.4;
+    color: #000000;
+    border-radius: 8px;
+    width: calc(100% - 220px); /* Adjust based on header width */
+    position: relative;
+    min-height: 200px; /* Set a fixed height if needed */
+}
+
+#experience .content-container p {
+    margin: 0; /* Remove margin for smooth opening/closing */
+    padding: 5px 0; /* Use padding instead */
+    color: #000000;
+    text-align: left; /* Ensure text alignment */
+}
+
+/* EDUCATION */
+
+.education-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.education-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.education-card {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.education-card h3 {
+    margin-top: 0;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress {
+    height: 10px;
+    background-color: #c89666;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+
+.education-card:hover .progress {
+    background-color: #c89666;
+    color: #ffffff !important; /* Make text color white */
+}
+
+/* Tabbed Education */
+.tabs {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.tab-button {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    color: #f0f0f0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #c89666; /* Subtle color bar */
+}
+
+.tab-content {
+    display: none;
+    padding: 10px 15px; /* More compact padding */
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Compact text inside tabs */
+.tab-content p {
+    margin: 5px 0; /* Reduce margin for compact layout */
+    line-height: 1.4; /* Adjust line height for readability */
+}
+
+/* CV Button Style */
+.cv-button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    -moz-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    -ms-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    height: 2em;
+    line-height: 2em;
+    min-width: 6em;
+    padding: 0 0.75em;
+	font-size: 0.75em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #53504e; /* Base color */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.cv-button:hover {
+    background-color: #12343b; /* Hover color */
+    color: #ffffff !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cv-button:focus {
+    outline: none;
+    border-color: #12343b; /* Focus color */
+}
+
+.cv-button:active {
+    background-color: #0f2a2f; /* Active color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* General Mobile Adjustments */
+@media screen and (max-width: 820px) {
+    /* Move canvas below the text in the header */
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+		margin-left: 0;
+    }
+	.header-content h4 {
+		width: 300px;
+		text-align: left;
+    }
+    .header-image {
+        display: none;
+    }
+
+    /* Hello Section */
+    .header-content h1 {
+        width: 90%; /* Adjust width to prevent narrowing */
+        text-align: center;
+    }
+
+    /* Education Section */
+    .tabs {
+        display: flex;
+        flex-direction: column;
+    }
+    .tab-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+    .tab-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .tab-content {
+        padding: 10px;
+    }
+
+    /* Experience Section */
+    .experience-container {
+        flex-direction: column;
+		display: flex;
+    }
+    .accordeon-items {
+        width: 130px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-left: 0;
+        justify-content: flex-end;
+    }
+    .accordeon-content {
+        margin-left: 0;
+        padding: 10px; /* Adjust padding for mobile */
+    }
+    #experience .content-container {
+        margin-left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+}
