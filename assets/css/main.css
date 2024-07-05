@@ -3871,7 +3871,7 @@ input, select, textarea {
 		
 		.button.small {
 			font-size: 0.8em;
-			padding: 0.5em 1em;
+			padding: 0em 1em;
 		}
 		
 		@media screen and (max-width: 980px) {
@@ -3907,6 +3907,158 @@ input, select, textarea {
 			}
 		}
 		
+
+/* Custom Styles for About Me Section */
+
+.about-me-list {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 2em;
+}
+
+.about-me-list {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 2em;
+}
+
+.about-me-list li {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 10px;
+    font-size: 1.2em; /* Adjust font size as needed */
+    color: #12343b; /* Adjust color as needed */
+    line-height: 1.5;
+	display: flex;
+    flex-direction: row;
+	align-items: center;
+}
+
+.about-me-list li:before {
+    content: '\2023'; /* Unicode for right arrow */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-60%);
+    color: #12343b; /* Match this color to your website's color scheme */
+    font-size: 1.2em; /* Adjust arrow size as needed */
+}
+@media screen and (max-width: 980px) {
+    .about-me-list li {
+        font-size: 1em; /* Adjust font size for smaller screens */
+        padding-left: 25px;
+    }
+
+    .about-me-list li:before {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .about-me-list li {
+        font-size: 0.9em; /* Further adjust font size for very small screens */
+        padding-left: 20px;
+    }
+
+    .about-me-list li:before {
+        font-size: 0.9em;
+    }
+}
+
+/* Skills Section Styles */
+#skills .tabs {
+    margin-top: 20px;
+}
+
+#skills .tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: nowrap; /* Ensure buttons wrap on smaller screens */
+}
+
+#skills .highlight {
+    color: #12343b; /* Adjust this color to your desired highlight color */
+    font-weight: 400; /* Optional: make the text bold */
+}
+
+#skills .tab-button {
+    background: none;
+    padding: 0px;
+	width: 250px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#skills .tab-button:hover,
+#skills .tab-button.active {
+    color: #ffffff;
+}
+
+#skills .tab-button .icon {
+    font-size: 1.2em; /* Adjust icon size as needed */
+}
+
+#skills .tab-content {
+    display: none;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#skills .tab-content.active {
+    display: block;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 980px) {
+    #skills .tab-buttons {
+        flex-direction: column;
+		gap: 5px;
+    }
+
+    #skills .tab-button {
+        width: 100%;
+        padding: 8px 15px;
+        font-size: 0.9em;
+        justify-content: center; /* Center-align text and icon */
+    }
+
+    #skills .tab-button .icon {
+        font-size: 1em;
+    }
+
+    #skills .tab-content {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #skills .tab-button {
+        padding: 6px 10px;
+        font-size: 0.8em;
+		width: 250px;
+        justify-content: center; /* Center-align text and icon */
+    }
+
+    #skills .tab-button .icon {
+        font-size: 0.9em;
+    }
+
+    #skills .tab-content {
+        padding: 10px;
+    }
+}
+
 
 /* Certifications Section */
 .certifications-container {
@@ -4431,7 +4583,6 @@ body {
     }
 }
 
-
 /* General Mobile Adjustments */
 @media screen and (max-width: 1366px) {
     /* Move canvas below the text in the header */
@@ -4442,7 +4593,7 @@ body {
 		margin-left: 0;
     }
 	.header-content h4 {
-		width: 300px;
+		width: 600px;
 		text-align: left;
     }
     .header-image {
@@ -4484,6 +4635,134 @@ body {
         flex-direction: row-reverse;
         align-items: center;
         margin-left: -10px;
+        justify-content: flex-end;
+    }
+    .accordeon-content {
+        margin-left: 0;
+        padding: 10px; /* Adjust padding for mobile */
+    }
+    #experience .content-container {
+        margin-left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    /* Move canvas below the text in the header */
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+		margin-left: 0;
+    }
+	.header-content h4 {
+		width: 500px;
+		text-align: left;
+    }
+    .header-image {
+        display: none;
+    }
+
+    /* Hello Section */
+    .header-content h1 {
+        width: 90%; /* Adjust width to prevent narrowing */
+        text-align: center;
+    }
+
+    /* Education Section */
+    .tabs {
+        display: flex;
+        flex-direction: column;
+    }
+    .tab-buttons {
+        display: flex;
+        flex-direction: column;
+		align-items: center;
+    }
+    .tab-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .tab-content {
+        padding: 10px;
+    }
+
+    /* Experience Section */
+    .experience-container {
+        flex-direction: column;
+		display: flex;
+    }
+    .accordeon-items {
+        width: 130px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-left: 0;
+        justify-content: flex-end;
+    }
+    .accordeon-content {
+        margin-left: 0;
+        padding: 10px; /* Adjust padding for mobile */
+    }
+    #experience .content-container {
+        margin-left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    /* Move canvas below the text in the header */
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+		margin-left: 0;
+    }
+	.header-content h4 {
+		width: 300px;
+		text-align: left;
+    }
+    .header-image {
+        display: none;
+    }
+
+    /* Hello Section */
+    .header-content h1 {
+        width: 90%; /* Adjust width to prevent narrowing */
+        text-align: center;
+    }
+
+    /* Education Section */
+    .tabs {
+        display: flex;
+        flex-direction: column;
+    }
+    .tab-buttons {
+        display: flex;
+        flex-direction: column;
+		align-items: center;
+    }
+    .tab-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .tab-content {
+        padding: 10px;
+    }
+
+    /* Experience Section */
+    .experience-container {
+        flex-direction: column;
+		display: flex;
+    }
+    .accordeon-items {
+        width: 130px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-left: 0;
         justify-content: flex-end;
     }
     .accordeon-content {

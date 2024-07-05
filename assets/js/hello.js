@@ -1,4 +1,4 @@
-const theWords = ["Hi", "Bonjour", "Hallo", "Hola", "Kaixo", "Olá"];
+const theWords = ["Hi,", "Bonjour,", "Hallo,", "Hola,", "Olá,"];
 const theBox = document.getElementById("hiword");
 let idx = 0;
 
