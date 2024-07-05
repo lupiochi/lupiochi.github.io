@@ -4762,7 +4762,7 @@ body {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        margin-left: 0;
+        margin-left: -15px;
         justify-content: flex-end;
     }
     .accordeon-content {
