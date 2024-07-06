@@ -1,18 +1,81 @@
-/*
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
-/* Header */
+/* Ensure the header is visible without JavaScript */
+body.is-preload #header.alt > * {
+    opacity: 1;
+}
 
-	body.is-preload #header.alt > * {
-		opacity: 1;
-	}
+/* Prevent transformations when JavaScript is disabled */
+body.is-preload #header.alt .logo {
+    transform: none;
+}
 
-	body.is-preload #header.alt .logo {
-		-moz-transform: none;
-		-webkit-transform: none;
-		-ms-transform: none;
-		transform: none;
-	}
+/* Show all tab contents when JavaScript is disabled */
+body.is-preload .tabs .tab-content {
+    display: block;
+}
+
+.noscript-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+  }
+  
+  .noscript-content {
+	background-color: #12343b;
+	padding: 20px;
+	border-radius: 8px;
+	text-align: center;
+	max-width: 400px;
+	width: 80%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .noscript-content h2 {
+	margin-top: 0;
+  }
+  
+  .noscript-content ul {
+	list-style-type: none;
+	padding: 0;
+  }
+  
+  .noscript-content ul li {
+	margin: 10px 0;
+  }
+
+  .noscript-content ul li a{
+	color: aliceblue;
+  }
+  
+  .noscript-content a {
+	color: #007bff;
+	text-decoration: none;
+  }
+  
+  .noscript-content a:hover {
+	text-decoration: underline;
+  }
+
+  .close-btn {
+	top: 10px;
+	right: 10px;
+	background: none;
+	border: none;
+	font-size: 20px;
+	cursor: pointer;
+  }
+  
+  .hidden-checkbox {
+	display: none;
+  }
+  
+  .hidden-checkbox:checked + .noscript-popup {
+	display: none;
+  }
