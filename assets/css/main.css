@@ -1,11 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
 
-/*
-	Based on the Stellar template by @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license
-*/
-
 html, body, div, span, h1, h2, h3, h4, p, a, img, s,
 small, strong, b, ul, li, label, table,
 canvas,
@@ -679,8 +674,10 @@ body {
 		}
 
 		#header p {
-			font-size: 1.25em;
+			font-size: 1em;
 			letter-spacing: -0.025em;
+			margin: 0;
+			color: white;
 		}
 
 		#header.alt {
@@ -734,7 +731,7 @@ body {
 			}
 
 				#header p {
-					font-size: 1em;
+					font-size: 0.8em;
 					letter-spacing: 0;
 				}
 
@@ -1177,8 +1174,8 @@ body {
 		.portfolio-image {
 			width: 100%;
 			height: auto;
-			aspect-ratio: 16/2; /* Aspect ratio for a thin banner */
-			object-fit: cover; /* Ensures the image covers the area */
+			aspect-ratio: 16/2; /* portfolio images aspect ratio */
+			object-fit: cover; 
 			filter: grayscale(100%);
 			transition: filter 0.3s, transform 0.3s;
 		}
@@ -1208,8 +1205,8 @@ body {
 				display: block;
 				filter: grayscale(100%);
 				transition: filter 0.3s, transform 0.3s;
-				aspect-ratio: 16/4; /* Aspect ratio for a thin banner */
-				object-fit: cover; /* Ensures the image covers the area */
+				aspect-ratio: 16/4; /* portfolio images aspect ratio */
+				object-fit: cover; 
 			}
 		}
 		
@@ -1221,7 +1218,7 @@ body {
 			.portfolio-image {
 				width: 100%;
 				object-fit: cover;
-				aspect-ratio: 16/4; /* Aspect ratio for a thin banner */
+				aspect-ratio: 16/4; /* portfolio images aspect ratio */
 				height: auto;
 				border-radius: 10%;
 				display: block;
@@ -1231,7 +1228,7 @@ body {
 		}
 		
 
-/* Custom Styles for About Me Section */
+/* About Me Section */
 
 .about-me-list {
     list-style: none;
@@ -1251,8 +1248,8 @@ body {
     position: relative;
     padding-left: 60px;
     margin-bottom: 10px;
-    font-size: 1.2em; /* Adjust font size as needed */
-    color: #12343b; /* Adjust color as needed */
+    font-size: 1.2em;
+    color: #12343b;
     line-height: 1.5;
 	display: flex;
     flex-direction: row;
@@ -1260,17 +1257,17 @@ body {
 }
 
 .about-me-list li:before {
-    content: '\2023'; /* Unicode for right arrow */
+    content: '\2023'; /* Unicode for small bullet arrow */
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-60%);
-    color: #12343b; /* Match this color to your website's color scheme */
-    font-size: 1.2em; /* Adjust arrow size as needed */
+    color: #12343b;
+    font-size: 1.2em; /* arrow size */
 }
 @media screen and (max-width: 980px) {
     .about-me-list li {
-        font-size: 1em; /* Adjust font size for smaller screens */
+        font-size: 1em; 
         padding-left: 25px;
     }
 
@@ -1281,7 +1278,7 @@ body {
 
 @media screen and (max-width: 736px) {
     .about-me-list li {
-        font-size: 0.9em; /* Further adjust font size for very small screens */
+        font-size: 0.9em; 
         padding-left: 20px;
     }
 
@@ -1290,7 +1287,7 @@ body {
     }
 }
 
-/* Skills Section Styles */
+/* Skills */
 #skills .tabs {
     margin-top: 20px;
 }
@@ -1300,12 +1297,12 @@ body {
     justify-content: center;
     gap: 15px;
     margin-bottom: 20px;
-    flex-wrap: nowrap; /* Ensure buttons wrap on smaller screens */
+    flex-wrap: nowrap; /*  buttons wrap on smaller screens */
 }
 
 #skills .highlight {
-    color: #12343b; /* Adjust this color to your desired highlight color */
-    font-weight: 400; /* Optional: make the text bold */
+    color: #12343b; 
+    font-weight: 400; 
 }
 
 #skills .tab-button {
@@ -1327,7 +1324,7 @@ body {
 }
 
 #skills .tab-button .icon {
-    font-size: 1.2em; /* Adjust icon size as needed */
+    font-size: 1.2em; 
 }
 
 #skills .tab-content {
@@ -1342,7 +1339,7 @@ body {
     display: block;
 }
 
-/* Responsive Design */
+/* Multi-media design for skills section */
 @media screen and (max-width: 980px) {
     #skills .tab-buttons {
         flex-direction: column;
@@ -1480,12 +1477,14 @@ body {
     text-decoration: underline;
 }
 
-/* Mobile Adjustments */
+
+/* multi-media adjustments for pubs */
 @media screen and (max-width: 820px) {
     .publication-item {
         padding: 10px;
     }
 }
+
 
 /* Awards Section */
 .awards-container {
@@ -1521,7 +1520,7 @@ body {
     color: #555;
 }
 
-/* Mobile Adjustments */
+/* mobile awards adjustments */
 @media screen and (max-width: 820px) {
     .awards-container {
         padding: 10px;
@@ -1539,15 +1538,16 @@ body {
         font-size: 1em;
     }
 }
-		
+
+
 /* Fixed Header */
 #fixed-header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    background-color: rgba(255, 255, 255, 0.1); /* transparent background */
     border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-    z-index: 1000; /* Ensure it stays on top */
+    z-index: 1000; /*  it stays on top */
     transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
@@ -1555,13 +1555,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Adjust padding as needed */
+    padding: 10px 20px; 
 }
 
 #fixed-header .name {
     font-size: 1.5em;
     font-weight: bold;
-    color: #ffffff; /* Text color */
+    color: #ffffff; /* text color */
 }
 
 #fixed-header .icons {
@@ -1577,28 +1577,29 @@ body {
 }
 
 #fixed-header .icons a {
-    font-size: 0.6em; /* Make icons smaller */
-    padding: 5px; /* Adjust padding to make them more compact */
-    color: #ffffff; /* Icon color */
+    font-size: 0.6em;
+    padding: 5px;
+    color: #ffffff; /* color of icons on header */
 }
 
-/* Ensure page content doesn't hide behind the fixed header */
 body {
-    padding-top: 60px; /* Adjust based on header height */
+    padding-top: 60px;
 }
 
 
 
-/* Accordion Tab Styles */
+/* Accordion items */
 
 .accordeon-items {
     display: flex;
     flex-direction: column;
-    width: 220px; /* Set a fixed width for the accordion items */
+    width: 220px; 
 }
 
 .accordeon-item {
     border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+	max-width: 100%;
+	box-sizing: border-box;
 }
 
 .experience-container {
@@ -1607,7 +1608,7 @@ body {
 
 .accordeon-header {
     background-color: rgba(255, 255, 255, 0.15);
-    color: #d3d3d3; /* Text color of closed tabs */
+    color: #d3d3d3;
     cursor: pointer;
     padding: 10px 15px;
     font-size: 1em;
@@ -1617,12 +1618,13 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
     text-align: left;
     position: relative;
+	box-sizing: border-box;
 }
 
 .accordeon-item:hover .accordeon-header,
 .accordeon-item.active .accordeon-header {
-    background-color: #12343b; /* Dark blue color */
-    color: #ffffff !important; /* Text color on hover and active */
+    background-color: #12343b;
+    color: #ffffff !important;
 }
 
 .accordeon-item.active .accordeon-header::after {
@@ -1632,41 +1634,46 @@ body {
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: #c89666; /* Subtle color bar */
+    background-color: #c89666;
 }
 
 .accordeon-content {
-    display: none; /* Hide content by default */
+    display: none;
 	padding: 50px;
 	margin-left: 500px;
+	box-sizing: border-box;
 }
 
 
 /* EXPERIENCE  */
+#experience {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
 
 #experience .content-container {
-    margin-left: 220px; /* Adjust based on header width */
+    margin-left: 220px;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.05);
     font-size: 1em;
     line-height: 1.4;
     color: #000000;
     border-radius: 8px;
-    width: calc(100% - 220px); /* Adjust based on header width */
+    width: calc(100% - 220px);
     position: relative;
-    min-height: 200px; /* Set a fixed height if needed */
+    min-height: 200px;
 }
 
 #experience .content-container p {
-    margin: 0; /* Remove margin for smooth opening/closing */
-    padding: 5px 0; /* Use padding instead */
+    margin: 0;
+    padding: 5px 0;
     color: #000000;
-    text-align: left; /* Ensure text alignment */
+    text-align: left;
 }
 
-/* EDUCATION */
-
-/* Tabbed Education */
+/* EDUCATION (w/ tabs) */
 .tabs {
     max-width: 1000px;
     margin: 0 auto;
@@ -1703,12 +1710,12 @@ body {
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: #c89666; /* Subtle color bar */
+    background-color: #c89666; /* small color bar below selected item*/
 }
 
 .tab-content {
     display: none;
-    padding: 10px 15px; /* More compact padding */
+    padding: 10px 15px; 
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -1719,23 +1726,14 @@ body {
     display: block;
 }
 
-/* Fade-in animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
 
 /* Compact text inside tabs */
 .tab-content p {
-    margin: 5px 0; /* Reduce margin for compact layout */
-    line-height: 1.4; /* Adjust line height for readability */
+    margin: 5px 0; 
+    line-height: 1.4; 
 }
 
-/* CV Button Style */
+/* CV Buttons on about me */
 .cv-button {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -1782,7 +1780,10 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* General Mobile Adjustments */
+
+
+/* General Multi-Media Adjustments (so many screen sizes aaaaaaa)*/
+
 @media screen and (max-width: 820px) {
     /* Move canvas below the text in the header */
     .header-content {
@@ -1825,21 +1826,32 @@ body {
 
     /* Experience Section */
     .experience-container {
-        flex-direction: column;
-		display: flex;
-    }
-    .accordeon-items {
-        width: 130px;
         display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        margin-left: 0;
-        justify-content: flex-end;
+        flex-direction: column;
     }
+
+    .accordeon-items {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+		width: auto;
+    }
+
+    .accordeon-item {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        margin-right: 0px; /* Space between items */
+        width: 25%; /* Adjust width as needed */
+		align-items: center;
+    }
+
     .accordeon-content {
         margin-left: 0;
         padding: 10px; /* Adjust padding for mobile */
     }
+
     #experience .content-container {
         margin-left: 0;
         width: 100%;
@@ -1847,7 +1859,6 @@ body {
     }
 }
 
-/* General Mobile Adjustments */
 @media screen and (max-width: 1366px) {
     /* Move canvas below the text in the header */
     .header-content {
@@ -1890,21 +1901,32 @@ body {
 
     /* Experience Section */
     .experience-container {
-        flex-direction: column;
-		display: flex;
-    }
-    .accordeon-items {
-        width: 130px;
         display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        margin-left: -10px;
-        justify-content: flex-end;
+        flex-direction: column;
     }
+
+    .accordeon-items {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+		width: auto;
+    }
+
+    .accordeon-item {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        margin-right: 0px; /* Space between items */
+        width: 25%; /* Adjust width as needed */
+		align-items: center;
+    }
+
     .accordeon-content {
         margin-left: 0;
         padding: 10px; /* Adjust padding for mobile */
     }
+
     #experience .content-container {
         margin-left: 0;
         width: 100%;
@@ -1954,21 +1976,32 @@ body {
 
     /* Experience Section */
     .experience-container {
-        flex-direction: column;
-		display: flex;
-    }
-    .accordeon-items {
-        width: 130px;
         display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        margin-left: 0;
-        justify-content: flex-end;
+        flex-direction: column;
     }
+
+    .accordeon-items {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+		width: auto;
+    }
+
+    .accordeon-item {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        margin-right: 0px; /* Space between items */
+        width: 25%; /* Adjust width as needed */
+		align-items: center;
+    }
+
     .accordeon-content {
         margin-left: 0;
         padding: 10px; /* Adjust padding for mobile */
     }
+
     #experience .content-container {
         margin-left: 0;
         width: 100%;
@@ -2018,21 +2051,108 @@ body {
 
     /* Experience Section */
     .experience-container {
-        flex-direction: column;
-		display: flex;
-    }
-    .accordeon-items {
-        width: 130px;
         display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        margin-left: 0;
-        justify-content: flex-end;
+        flex-direction: column;
     }
+
+    .accordeon-items {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+		width: auto;
+    }
+
+    .accordeon-item {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        margin-right: 0px; /* Space between items */
+        width: 25%; /* Adjust width as needed */
+		align-items: center;
+    }
+
     .accordeon-content {
         margin-left: 0;
         padding: 10px; /* Adjust padding for mobile */
     }
+
+    #experience .content-container {
+        margin-left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Move canvas below the text in the header */
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+		margin-left: 0;
+    }
+	.header-content p {
+		width: 300px;
+		font-size: 0.7em;
+		text-align: left;
+    }
+    .header-image {
+        display: none;
+    }
+
+    /* Hello Section */
+    .header-content h1 {
+        width: 90%; /* Adjust width to prevent narrowing */
+        text-align: center;
+    }
+
+    /* Education Section */
+    .tabs {
+        display: flex;
+        flex-direction: column;
+    }
+    .tab-buttons {
+        display: flex;
+        flex-direction: column;
+		align-items: center;
+    }
+    .tab-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .tab-content {
+        padding: 10px;
+    }
+
+    /* Experience Section */
+    .experience-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .accordeon-items {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+		width: auto;
+    }
+
+    .accordeon-item {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        margin-right: 0px; /* Space between items */
+        width: 36%; /* Adjust width as needed */
+		align-items: center;
+    }
+
+    .accordeon-content {
+        margin-left: 0;
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
     #experience .content-container {
         margin-left: 0;
         width: 100%;
