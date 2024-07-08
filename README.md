@@ -17,14 +17,11 @@ The website uses a custom-designed theme with the following color palette:
 - Text Color: #E7D0B4
 
 ##  Performance
-The website has been optimized for performance, accessibility, best practices, and SEO, achieving high scores in Google Lighthouse audits.
+The website has been optimized for performance, accessibility, best practices, and SEO, achieving high scores in [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/) audits.
 
-![Lighthouse Scores](path/to/lighthouse-scores.png)
+![Lighthouse Scores](assets/images/lighthouse.jpg)
 
-- **Performance:** 90+
-- **Accessibility:** 90+
-- **Best Practices:** 90+
-- **SEO:** 90+
+Full JSON report here: [JSON Report for lupiochi.github.io](assets/docs/lighthouse.json)
 
 ## License
 This repo is under the MIT License, you can use any of its components as long as you acknowledge its authors.
