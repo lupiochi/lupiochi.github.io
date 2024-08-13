@@ -19,24 +19,24 @@ document.addEventListener("DOMContentLoaded", () => {
   
   const setupAccordion = (id) => {
     const sectionElement = document.getElementById(id);
-    const accordionItems = sectionElement.querySelectorAll(".accordeon-item");
+    const accordionItems = sectionElement.querySelectorAll(".accordion-item");
     const contentDisplay = sectionElement.querySelector(".content-container");
   
     if (accordionItems.length > 0) {
       const initialItem = accordionItems[0];
       initialItem.classList.add("active");
-      contentDisplay.innerHTML = initialItem.querySelector(".accordeon-content").innerHTML;
+      contentDisplay.innerHTML = initialItem.querySelector(".accordion-content").innerHTML;
       contentDisplay.style.display = "block";
     }
   
     accordionItems.forEach(item => {
-      item.querySelector(".accordeon-header").addEventListener("click", () => {
+      item.querySelector(".accordion-header").addEventListener("click", () => {
         accordionItems.forEach(itm => {
           itm.classList.remove("active");
-          itm.querySelector(".accordeon-content").style.display = "none";
+          itm.querySelector(".accordion-content").style.display = "none";
         });
         item.classList.add("active");
-        contentDisplay.innerHTML = item.querySelector(".accordeon-content").innerHTML;
+        contentDisplay.innerHTML = item.querySelector(".accordion-content").innerHTML;
         contentDisplay.style.display = "block";
       });
     });

@@ -1,0 +1,137 @@
+{
+  "experience": [
+    {
+      "header": "UPV + ERBEL.eus",
+      "position": "Genomics Data Scientist",
+      "time": "June 2024 - present",
+      "place": "ERBEL - Applied Genomics and Bioinformatics, Spain",
+      "description": [
+        "Developed tools for the conversion between multiple popular file formats in genomics.",
+        "Built and automated a metagenomics pipeline using Python and Snakemake.",
+        "Conducted sample retrieval and analysis as part of beekeeping research.",
+        "Applied genomics and data analysis approaches to support ongoing research in beekeeping and metagenomics.",
+        "Collaborated with ERBEL.eus for beekeeping research."
+      ]
+    },
+    {
+      "header": "UC Biotech",
+      "position": "Bioinformatician",
+      "time": "Nov 2021 - Dec 2023",
+      "place": "Data-driven Molecular Design Lab, Portugal",
+      "description": [
+        "Developed and published a deep learning tool for drug-resistance prediction in a high impact bioinformatics journal.",
+        "Processed and analyzed multi-omics data from over 10 public datasets and hundreds of cell lines.",
+        "Awarded a highly competitive Fundación La Caixa-funded research grant (LCF/PR/HP20/52300003).",
+        "Established a pipeline for the virtual screening of over 300 compounds against proteins of interest in neurodevelopment.",
+        "Primary mentor for one undergraduate and one master’s thesis student."
+      ]
+    },
+    {
+      "header": "CNC-UC",
+      "position": "Undergraduate Researcher",
+      "time": "Oct 2019 - July 2020",
+      "place": "MitoLab, Portugal",
+      "description": [
+        "Implemented multiple metabolic assays and characterized the dynamics and patterns of different cancer cell lines.",
+        "Developed a brief inhouse Python pipeline for the analysis and visualization of different data types, contributing to a 30% reduction in time spent on repetitive tasks by different project members.",
+        "Compiled and published project perspectives in review format on a high impact ageing journal."
+      ]
+    },
+    {
+      "header": "CEMMPRE",
+      "position": "Research Intern",
+      "time": "Mar 2018 - Aug 2019",
+      "place": "University of Coimbra - Environmental Microbiology Lab, Portugal",
+      "description": [
+        "Assisted in the design and construction of reactors for heavy metal bioaccumulation and bioleaching assays.",
+        "Contributed to the extraction, sequencing and annotation of tens of bacterial genomes.",
+        "Screened genomic data for the identification of heavy metal-resistance genes using mathematical modelling.",
+        "Contributed to the organization of the international microbiology congress Microbiotec19.",
+        "Hosted a round table between former ASM President Dr. Michele Swanson and over one hundred University of Coimbra students and researchers."
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "title": "Advancing Drug Safety in Drug Development: Bridging Computational Predictions for Enhanced Toxicity Prediction",
+      "details": "Co-first author - 2024 | Chemical Research in Toxicology",
+      "link": "https://pubs.acs.org/doi/10.1021/acs.chemrestox.3c00352"
+    },
+    {
+      "title": "DELFOS: multi-omics-based prediction of cancer drug sensitivity with scRNA-seq data",
+      "details": "First author - 2023 | Chemical Research in Toxicology",
+      "link": "https://doi.org/10.1093/bioinformatics/btad645"
+    },
+    {
+      "title": "Multi-omics-based Drug Response Prediction of Cancer Cell Lines with DELFOS",
+      "details": "Master's thesis - 2023 | University of Coimbra",
+      "link": "https://estudogeral.uc.pt/handle/10316/105989"
+    },
+    {
+      "title": "From single-omics to interactomics: How can ligand-induced perturbations modulate single-cell phenotypes?",
+      "details": "First author - 2022 | Advances in Protein Chemistry and Structural Biology",
+      "link": "https://doi.org/10.1016/bs.apcsb.2022.05.006"
+    },
+    {
+      "title": "Sestrin2 and mitochondrial quality control: Potential impact in myogenic differentiation",
+      "details": "First author - 2021 | Ageing Research Reviews",
+      "link": "https://doi.org/10.1016/j.arr.2021.101309"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Mathematics for Machine Learning and Data Science",
+      "organization": "DeepLearning.AI",
+      "date": "June 2024",
+      "link": "/assets/docs/Mathematics for ML and DS_certificate.pdf"
+    },
+    {
+      "name": "Python for Data Analysis",
+      "organization": "ApexLearning.co.uk",
+      "date": "Feb 2024",
+      "link": "https://www.apexlearning.org.uk/course/introduction-to-data-analysis"
+    },
+    {
+      "name": "Introduction to Data Analysis",
+      "organization": "ApexLearning.co.uk",
+      "date": "Feb 2024",
+      "link": "https://www.apexlearning.org.uk/course/python-for-data-analysis"
+    },
+    {
+      "name": "Associate Data Scientist Certification",
+      "organization": "DataCamp",
+      "date": "March 2023",
+      "link": "/assets/docs/associate_data_scientist.pdf"
+    },
+    {
+      "name": "Data Analyst with Python (36h)",
+      "organization": "DataCamp",
+      "date": "March 2023",
+      "link": "/assets/docs/associate_data_scientist.pdf"
+    },
+    {
+      "name": "Data Scientist with Python (96h)",
+      "organization": "DataCamp",
+      "date": "March 2023",
+      "link": "/assets/docs/associate_data_scientist.pdf"
+    }
+  ],
+  "awards": [
+    {
+      "title": "PhD Studentship by the Portuguese Foundation for Science and Technology",
+      "description": "I was awarded a highly competitive PhD Studentship by the Portuguese Foundation for Science and Technology, ranking among the top 10 recipients. I ultimately decided to refuse this studentship, as I wanted to broaden my horizons and pursue research in other countries."
+    },
+    {
+      "title": "Merit Board Recognition at the University of Coimbra",
+      "description": "Recognized by the Merit Board for the Top 5% Students at the University of Coimbra in 2019/2020 and 2021/2022 for outstanding academic performance."
+    },
+    {
+      "title": "FCTUC Student Grant for International Symposium",
+      "description": "Received a Faculty of Sciences and Technology of the University of Coimbra (FCTUC) Student Grant for outstanding academic performance to attend an international symposium in 2019."
+    },
+    {
+      "title": "Second Place in National \"Science at School Awards\"",
+      "description": "Achieved second place overall in the national competition \"Science at School Awards” (Ilídio Pinho Foundation) in 2018, in association with the University of Coimbra."
+    }
+  ]
+}

@@ -1590,13 +1590,13 @@ body {
 
 /* Accordion items */
 
-.accordeon-items {
+.accordion-items {
     display: flex;
     flex-direction: column;
     width: 220px; 
 }
 
-.accordeon-item {
+.accordion-item {
     border-bottom: 1px solid rgba(255, 255, 255, 0.35);
 	max-width: 100%;
 	box-sizing: border-box;
@@ -1606,7 +1606,7 @@ body {
     display: flex;
 }
 
-.accordeon-header {
+.accordion-header {
     background-color: rgba(255, 255, 255, 0.15);
     color: #d3d3d3;
     cursor: pointer;
@@ -1621,13 +1621,13 @@ body {
 	box-sizing: border-box;
 }
 
-.accordeon-item:hover .accordeon-header,
-.accordeon-item.active .accordeon-header {
+.accordion-item:hover .accordion-header,
+.accordion-item.active .accordion-header {
     background-color: #12343b;
     color: #ffffff !important;
 }
 
-.accordeon-item.active .accordeon-header::after {
+.accordion-item.active .accordion-header::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -1637,7 +1637,7 @@ body {
     background-color: #c89666;
 }
 
-.accordeon-content {
+.accordion-content {
     display: none;
 	padding: 50px;
 	margin-left: 500px;
@@ -1654,7 +1654,7 @@ body {
 }
 
 #experience .content-container {
-    margin-left: 220px;
+    margin-left: 100px;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.05);
     font-size: 1em;
@@ -1682,7 +1682,7 @@ body {
 
 .tab-buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 10px;
 }
 
@@ -1830,7 +1830,7 @@ body {
         flex-direction: column;
     }
 
-    .accordeon-items {
+    .accordion-items {
         display: flex;
         flex-direction: row;
         overflow-x: auto;
@@ -1839,7 +1839,7 @@ body {
 		width: auto;
     }
 
-    .accordeon-item {
+    .accordion-item {
         flex: 0 0 auto;
         scroll-snap-align: start;
         margin-right: 0px; /* Space between items */
@@ -1847,7 +1847,7 @@ body {
 		align-items: center;
     }
 
-    .accordeon-content {
+    .accordion-content {
         margin-left: 0;
         padding: 10px; /* Adjust padding for mobile */
     }
@@ -1905,7 +1905,7 @@ body {
         flex-direction: column;
     }
 
-    .accordeon-items {
+    .accordion-items {
         display: flex;
         flex-direction: row;
         overflow-x: auto;
@@ -1914,7 +1914,7 @@ body {
 		width: auto;
     }
 
-    .accordeon-item {
+    .accordion-item {
         flex: 0 0 auto;
         scroll-snap-align: start;
         margin-right: 0px; /* Space between items */
@@ -1922,7 +1922,7 @@ body {
 		align-items: center;
     }
 
-    .accordeon-content {
+    .accordion-content {
         margin-left: 0;
         padding: 10px; /* Adjust padding for mobile */
     }
@@ -1980,7 +1980,7 @@ body {
         flex-direction: column;
     }
 
-    .accordeon-items {
+    .accordion-items {
         display: flex;
         flex-direction: row;
         overflow-x: auto;
@@ -1989,7 +1989,7 @@ body {
 		width: auto;
     }
 
-    .accordeon-item {
+    .accordion-item {
         flex: 0 0 auto;
         scroll-snap-align: start;
         margin-right: 0px; /* Space between items */
@@ -1997,7 +1997,7 @@ body {
 		align-items: center;
     }
 
-    .accordeon-content {
+    .accordion-content {
         margin-left: 0;
         padding: 10px; /* Adjust padding for mobile */
     }
@@ -2055,7 +2055,7 @@ body {
         flex-direction: column;
     }
 
-    .accordeon-items {
+    .accordion-items {
         display: flex;
         flex-direction: row;
         overflow-x: auto;
@@ -2064,7 +2064,7 @@ body {
 		width: auto;
     }
 
-    .accordeon-item {
+    .accordion-item {
         flex: 0 0 auto;
         scroll-snap-align: start;
         margin-right: 0px; /* Space between items */
@@ -2072,7 +2072,7 @@ body {
 		align-items: center;
     }
 
-    .accordeon-content {
+    .accordion-content {
         margin-left: 0;
         padding: 10px; /* Adjust padding for mobile */
     }
@@ -2131,7 +2131,7 @@ body {
         flex-direction: column;
     }
 
-    .accordeon-items {
+    .accordion-items {
         display: flex;
         flex-direction: row;
         overflow-x: auto;
@@ -2140,7 +2140,7 @@ body {
 		width: auto;
     }
 
-    .accordeon-item {
+    .accordion-item {
         flex: 0 0 auto;
         scroll-snap-align: start;
         margin-right: 0px; /* Space between items */
@@ -2148,7 +2148,7 @@ body {
 		align-items: center;
     }
 
-    .accordeon-content {
+    .accordion-content {
         margin-left: 0;
         padding: 10px; /* Adjust padding for mobile */
     }
