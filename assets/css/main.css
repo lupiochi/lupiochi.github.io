@@ -1021,85 +1021,62 @@ body.is-preload #header.alt > * {
 
 
 /* Skills */
-#skills .tabs {
-	margin-top: 20px;
-}
-#skills .tab-buttons {
-	display: flex;
-	justify-content: center;
-	gap: 15px;
-	margin-bottom: 20px;
-	flex-wrap: nowrap; /*  buttons wrap on smaller screens */
-}
 #skills .highlight {
 	color: #12343b;
 	font-weight: 400;
 }
-#skills .tab-button {
-	background: none;
-	padding: 0px;
-	width: 250px;
-	cursor: pointer;
-	font-size: 1em;
-	border-radius: 5px;
-	transition: background-color 0.3s, color 0.3s;
-	display: flex;
-	align-items: center;
-	gap: 10px;
-}
-#skills .tab-button:hover,
-#skills .tab-button.active {
-	color: #ffffff;
-}
-#skills .tab-button .icon {
-	font-size: 1.2em;
-}
-#skills .tab-content {
-	display: none;
-	text-align: left;
-	background-color: rgba(255, 255, 255, 0.1);
-	padding: 20px;
-	border-radius: 5px;
-}
-#skills .tab-content.active {
-	display: block;
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between categories */
+    text-align: left;
 }
 
+.skill-category h3 {
+    font-size: 1.5em;
+    color: #12343b;
+    margin-bottom: 0.5em;
+}
 
-/* Multi-screen design for skills  */
+.skill-category p {
+    margin: 0.5em 0;
+    font-size: 1em;
+    color: #555;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #2d545e;
+}
+
+/* Ensure the section is responsive */
 @media screen and (max-width: 980px) {
-	#skills .tab-buttons {
-		flex-direction: column;
-		gap: 5px;
-	}
-	#skills .tab-button {
-		width: 100%;
-		padding: 8px 15px;
-		font-size: 0.9em;
-		justify-content: center; 
-	}
-	#skills .tab-button .icon {
-		font-size: 1em;
-	}
-	#skills .tab-content {
-		padding: 15px;
-	}
-}
-@media screen and (max-width: 736px) {
-	#skills .tab-button {
-		padding: 6px 10px;
-		font-size: 0.8em;
-		width: 250px;
-		justify-content: center;
-	}
-	#skills .tab-button .icon {
-		font-size: 0.9em;
-	}
-	#skills .tab-content {
-		padding: 10px;
-	}
+    .skills-content {
+        gap: 15px;
+    }
+
+    .skill-category h3 {
+        font-size: 1.25em;
+    }
+
+    .skill-category p {
+        font-size: 0.9em;
+    }
 }
 
+@media screen and (max-width: 736px) {
+    .skills-content {
+        gap: 10px;
+    }
+
+    .skill-category h3 {
+        font-size: 1.1em;
+    }
+
+    .skill-category p {
+        font-size: 0.85em;
+    }
+}
 
 /* Certifications Section */
 .certifications-container {
