@@ -80,6 +80,12 @@
   ],
   "certifications": [
     {
+      "name": "Genomic Data Science",
+      "organization": "Johns Hopkins University",
+      "date": "August 2024",
+      "link": "https://www.coursera.org/account/accomplishments/specialization/GUPZ53IBZ7KV"
+    },
+    {
       "name": "Algorithms",
       "organization": "Stanford University",
       "date": "August 2024",
