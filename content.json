@@ -1,10 +1,10 @@
 {
   "experience": [
     {
-      "header": "UPV + ERBEL.eus",
+      "header": "UPV-EHU + ERBEL.eus",
       "position": "Genomics Data Scientist",
       "time": "June 2024 - present",
-      "place": "ERBEL - Applied Genomics and Bioinformatics, Spain",
+      "place": "Applied Genomics and Bioinformatics Lab (UPV/EHU) & ERBEL.eus, Spain",
       "description": [
         "Developed tools for the conversion between multiple popular file formats in genomics.",
         "Built and automated a metagenomics pipeline using Python and Snakemake.",
