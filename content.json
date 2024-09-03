@@ -1,6 +1,15 @@
 {
   "experience": [
     {
+      "header": "Inria",
+      "position": "PhD Student",
+      "time": "September 2024 - present",
+      "place": "Inria Nancy - CAPSID, France",
+      "description": [
+        "On the shoulders of giants."
+      ]
+    },
+    {
       "header": "UPV-EHU + ERBEL.eus",
       "position": "Genomics Data Scientist",
       "time": "June 2024 - present",
