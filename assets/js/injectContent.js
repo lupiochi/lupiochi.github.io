@@ -32,15 +32,16 @@ function injectExperienceContent(experienceData) {
     time.innerHTML = `<strong>Time:</strong> ${exp.time}`;
 
     const place = document.createElement('p');
-    place.innerHTML = `<strong>Place:</strong> ${exp.place}`;
+    place.innerHTML = `<strong>Place:</strong> ${parseLinks(exp.place)}</p>`;
 
     const description = document.createElement('div');
+    description.className = 'description';
     exp.description.forEach(desc => {
       const p = document.createElement('p');
-      p.textContent = desc;
+      p.innerHTML = `- ${parseLinks(desc)}`;
       description.appendChild(p);
     });
-
+    
     content.appendChild(position);
     content.appendChild(time);
     content.appendChild(place);
@@ -50,6 +51,10 @@ function injectExperienceContent(experienceData) {
     accordionItem.appendChild(content);
     experienceContainer.appendChild(accordionItem);
   });
+}
+
+function parseLinks(text) {
+  return text.replace(/\[\[(.*?)\|(.*?)\]\]/g, '<a href="$2" target="_blank">$1</a>');
 }
 
 function injectPublicationsContent(publicationsData) {
