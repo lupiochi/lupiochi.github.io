@@ -1,8 +1,8 @@
 {
   "experience": [
     {
-      "header": "Inria",
-      "position": "PhD Student in Computer Science",
+      "header": "INRIA",
+      "position": "PhD Student",
       "time": "September 2024 - present",
       "place": "[[Inria|https://www.inria.fr/fr/centre-inria-universite-lorraine]] - [[CAPSID|https://capsid.loria.fr/]], France",
       "description": [
@@ -25,16 +25,16 @@
       ]
     },
     {
-      "header": "Data-driven Molecular Design Lab",
+      "header": "DDMD",
       "position": "Bioinformatics Researcher",
       "time": "Nov 2021 - Dec 2023",
       "place": "[[Data-driven Molecular Design Lab|http://www.moreiralab.com/]] - [[Biocant|https://www.biocant.pt/]], Portugal",
       "description": [
         "Developed and published a deep learning tool for drug-resistance prediction in a high impact bioinformatics journal [[DELFOS|https://academic.oup.com/bioinformatics/article/39/11/btad645/7325354]].",
         "Processed and analyzed multi-omics data from over 10 public datasets and hundreds of cell lines.",
-        "Awarded a highly competitive Fundación La Caixa-funded research grant (LCF/PR/HP20/52300003).",
+        "Awarded a highly competitive Fundación La Caixa-funded research grant under the project LCF/PR/HP20/52300003.",
         "Established a pipeline for the virtual screening of over 300 compounds against proteins of interest in neurodevelopment.",
-        "Primary mentor for one undergraduate and one master’s thesis student."
+        "Directly supervised one undergraduate and one master’s student."
       ]
     },
     {
@@ -45,7 +45,7 @@
       "description": [
         "Implemented multiple metabolic assays and characterized the dynamics and patterns of different cancer cell lines.",
         "Developed a brief inhouse Python pipeline for the analysis and visualization of different data types, contributing to a 30% reduction in time spent on repetitive tasks by different project members.",
-        "Compiled and published project perspectives in review format on a high impact ageing journal."
+        "Compiled and published a [[review|https://doi.org/10.1016/j.arr.2021.101309]] on a high impact ageing journal."
       ]
     },
     {
@@ -58,7 +58,7 @@
         "Contributed to the extraction, sequencing and annotation of tens of bacterial genomes.",
         "Screened genomic data for the identification of heavy metal-resistance genes using mathematical modelling.",
         "Contributed to the organization of the international microbiology congress Microbiotec19.",
-        "Hosted a round table between former ASM President Dr. Michele Swanson and over one hundred University of Coimbra students and researchers."
+        "Hosted a round table between a former ASM President and over one hundred University of Coimbra students and researchers."
       ]
     }
   ],
