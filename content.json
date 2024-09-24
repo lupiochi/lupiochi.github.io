@@ -20,7 +20,6 @@
         "Developed tools for the conversion between multiple popular file formats in genomics.",
         "Built two automated metagenomics pipelines for the fast and efficient processing of NGS data.",
         "Processed and analyzed over 1TB of metagenomics sequencing data.",
-        "Generated and published a comprehensive report on the bee metagenomics of the Basque Country and Galicia.",
         "Collaborated with [[ERBEL.eus|https://erbel.eus]] for beekeeping research."
       ]
     },
@@ -30,7 +29,7 @@
       "time": "Nov 2021 - Dec 2023",
       "place": "[[Data-driven Molecular Design Lab|http://www.moreiralab.com/]] - [[Biocant|https://www.biocant.pt/]], Portugal",
       "description": [
-        "Developed and published a deep learning tool for drug-resistance prediction in a high impact bioinformatics journal [[DELFOS|https://academic.oup.com/bioinformatics/article/39/11/btad645/7325354]].",
+        "Developed and published a [[deep learning tool|https://academic.oup.com/bioinformatics/article/39/11/btad645/7325354]] for drug-resistance prediction in a high impact bioinformatics journal.",
         "Processed and analyzed multi-omics data from over 10 public datasets and hundreds of cell lines.",
         "Awarded a highly competitive Fundación La Caixa-funded research grant under the project LCF/PR/HP20/52300003.",
         "Established a pipeline for the virtual screening of over 300 compounds against proteins of interest in neurodevelopment.",
