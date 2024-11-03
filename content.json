@@ -40,18 +40,18 @@
     },
     {
       "header": "CNC-UC",
-      "position": "Undergraduate Researcher",
+      "position": "MolBio Undergraduate Researcher",
       "time": "Oct 2019 - July 2020",
       "place": "[[MitoLab - CNC-UC|https://cnc.uc.pt/en]], Portugal",
       "description": [
         "Implemented multiple metabolic assays and characterized the dynamics and patterns of different cancer cell lines.",
-        "Developed a brief inhouse Python pipeline for the analysis and visualization of different data types, contributing to a 30% reduction in time spent on repetitive tasks by different project members.",
+        "Developed an inhouse Python pipeline for the analysis and visualization of different data types.",
         "Compiled and published a [[review|https://doi.org/10.1016/j.arr.2021.101309]] on a high impact ageing journal."
       ]
     },
     {
       "header": "CEMMPRE",
-      "position": "Research Intern",
+      "position": "Microbiology Research Intern",
       "time": "Mar 2018 - Aug 2019",
       "place": "[[CEMMPRE - Environmental Microbiology Lab|https://www.uc.pt/cemmpre/]], Portugal",
       "description": [
