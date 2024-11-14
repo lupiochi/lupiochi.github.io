@@ -92,6 +92,17 @@
   ],
   "certifications": [
     {
+      "name": "Reinforcement and Deep Reinforcement Learning: Theory and Hands-On",
+      "organization": "DeepLorIA",
+      "date": "November 2024"
+    },
+    {
+      "name": "Diving into deep learning - theory and applications with PyTorch",
+      "organization": "Swiss Institute of Bioinformatics",
+      "date": "November 2024",
+      "link": "https://www.sib.swiss/training/course/20241108_DEEPP"
+    },
+    {
       "name": "SQL Basics for Data Science",
       "organization": "University of California, Davis",
       "date": "August 2024",
