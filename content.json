@@ -91,6 +91,12 @@
     }
   ],
   "certifications": [
+      {
+      "name": "Understanding Docker Containers",
+      "organization": "Inria SED-NGE",
+      "date": "November 2024",
+      "link": "/assets/docs/IntroToDocker_Piochi.pdf"
+    },
     {
       "name": "Reinforcement and Deep Reinforcement Learning: Theory and Hands-On",
       "organization": "DeepLorIA",
