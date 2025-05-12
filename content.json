@@ -92,6 +92,12 @@
   ],
   "certifications": [
     {
+      "name": "Advanced Statistics for Data Science",
+      "organization": "Johns Hopkins Bloomberg School of Public Health",
+      "date": "April 2025",
+      "link": "/assets/docs/IntroToDocker_Piochi.pdf"
+    },
+    {
       "name": "Understanding Docker Containers",
       "organization": "Inria SED-NGE",
       "date": "November 2024",
