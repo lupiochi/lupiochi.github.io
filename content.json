@@ -6,8 +6,8 @@
       "time": "September 2024 - present",
       "place": "[[Inria|https://www.inria.fr/fr/centre-inria-universite-lorraine]], France",
       "description": [
-            "Conducting research in generative deep learning architectures for structure-guided protein design and therapeutic discovery.",
-            "Driving the development of novel therapeutic strategies through advanced bioinformatics techniques."
+        "Designing generative deep learning architectures for structure-guided protein design and therapeutic discovery.",
+        "Built ppIRIS, a siamese cross-attention PPI model that revealed 1,000+ novel interactions in bacterial pathogens."
       ]
     },
     {
@@ -23,8 +23,8 @@
       ]
     },
     {
-      "header": "CNC.uc.pt",
-      "position": "Bioinformatics Researcher",
+      "header": "CNC-UC",
+      "position": "Master's Student & Bioinformatics Researcher",
       "time": "Nov 2021 - Dec 2023",
       "place": "[[Data-driven Molecular Design Lab|http://www.moreiralab.com/]] - [[Biocant|https://www.biocant.pt/]], Portugal",
       "description": [
@@ -32,17 +32,6 @@
         "Processed and analyzed multi-omics data from over 10 public datasets and hundreds of cell lines.",
         "Awarded a highly competitive Fundación La Caixa-funded research grant under the project LCF/PR/HP20/52300003.",
         "Established a pipeline for the virtual screening of over 300 compounds against proteins of interest in neurodevelopment."
-      ]
-    },
-    {
-      "header": "CNC-UC",
-      "position": "MolBio Undergraduate Researcher",
-      "time": "Oct 2019 - July 2020",
-      "place": "[[MitoLab - CNC-UC|https://cnc.uc.pt/en]], Portugal",
-      "description": [
-        "Implemented multiple metabolic assays and characterized the dynamics and patterns of different cancer cell lines.",
-        "Developed an inhouse Python pipeline for the analysis and visualization of different data types.",
-        "Compiled and published a [[review|https://doi.org/10.1016/j.arr.2021.101309]] on a high impact ageing journal."
       ]
     },
     {
@@ -93,10 +82,22 @@
   ],
   "certifications": [
     {
+      "name": "AWS Fundamentals",
+      "organization": "Amazon Web Services",
+      "date": "September 2025",
+      "link": "https://www.coursera.org/account/accomplishments/specialization/UDY579Z4B0A7"
+    },
+    {
+      "name": "Oxford Machine Learning Summer School",
+      "organization": "AI for Global Goals",
+      "date": "August 2025",
+      "link": "/assets/docs/OXFORD_ML_CERTIFICATE.pdf"
+    },
+    {
       "name": "Advanced Statistics for Data Science",
       "organization": "Johns Hopkins Bloomberg School of Public Health",
       "date": "April 2025",
-      "link": "/assets/docs/IntroToDocker_Piochi.pdf"
+      "link": "https://www.coursera.org/account/accomplishments/specialization/RG92RKU4LDDB"
     },
     {
       "name": "Understanding Docker Containers",
@@ -166,6 +167,10 @@
     }
   ],
   "awards": [
+    {
+      "title": "Selected for Summer School on Machine Learning in Health & Biology at the University of Oxford",
+      "description": "I was selected among hundreds of applicants worldwide to attend the prestigious Summer School organized by AI for Global Goals on Machine Learning in Health & Biology (MLx) at the University of Oxford, UK, in August 2024."
+    },
     {
       "title": "PhD Studentship by the ANR (French National Research Agency)",
       "description": "I was awarded a highly competitive PhD Studentship by the French Agence Nationale de la Recherche (ANR) to conduct my work at INRIA."
