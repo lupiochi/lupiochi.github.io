@@ -50,6 +50,11 @@
   ],
   "publications": [
     {
+      "title": "ppIRIS: deep learning for proteome-wide prediction of bacterial protein-protein interactions",
+      "details": "First author - 2025 | bioRxiv",
+      "link": "https://doi.org/10.1101/2025.09.22.677885"
+    },
+    {
       "title": "Shaping the uncharted: Revealing the protein structure space from the perspective of generative models",
       "details": "First author - 2025 | Cell Systems",
       "link": "https://doi.org/10.1016/j.cels.2025.101369"
