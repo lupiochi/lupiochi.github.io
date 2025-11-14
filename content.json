@@ -1,16 +1,6 @@
 {
   "experience": [
     {
-      "header": "Sciences Po",
-      "position": "Adjunct Professor",
-      "time": "Jan 2026 - present",
-      "place": "[[Sciences Po|https://www.sciencespo.fr/college/fr/vie-campus/campus/nancy/]], France",
-      "description": [
-        "Appointed to teach a course on Artificial Intelligence Fundamentals, Ethics and Governance (ID: CSPO 24A18), beginning January 2026.",
-        "Gave a talk as an invited speaker on Responsible AI usage at Sciences Po integration week for over 150 students in August 2025."
-      ]
-    },
-    {
       "header": "INRIA",
       "position": "PhD Student",
       "time": "September 2024 - present",
@@ -21,9 +11,19 @@
       ]
     },
     {
+      "header": "Sciences Po",
+      "position": "Adjunct Professor",
+      "time": "January 2026 - present",
+      "place": "[[Sciences Po|https://www.sciencespo.fr/college/fr/vie-campus/campus/nancy/]], France",
+      "description": [
+        "Appointed to teach a course on Artificial Intelligence Fundamentals, Ethics and Governance (ID: CSPO 24A18), beginning January 2026.",
+        "Gave a talk as an invited speaker on Responsible AI usage at Sciences Po integration week for over 150 students in August 2025."
+      ]
+    },
+    {
       "header": "ERBEL.eus",
       "position": "Data Scientist",
-      "time": "Jan 2024 - September 2024",
+      "time": "January 2024 - September 2024",
       "place": "[[Applied Genomics & Bioinformatics team (UPV/EHU)|https://www.genomic-resources.eus/]] & [[ERBEL.eus|https://erbel.eus]], Spain",
       "description": [
         "Contributed to the European [[BEEGUARDS|https://beeguards.eu/]] and national [[ECOAPI|https://tinyurl.com/ecoapi]](ref. TED2021-131393B-I00) projects for the study of beekeeping and metagenomics.",
@@ -35,7 +35,7 @@
     {
       "header": "CNC-UC",
       "position": "Master's Student & Bioinformatics Researcher",
-      "time": "Nov 2021 - Dec 2023",
+      "time": "November 2021 - December 2023",
       "place": "[[Data-driven Molecular Design Lab|http://www.moreiralab.com/]] - [[Biocant|https://www.biocant.pt/]], Portugal",
       "description": [
         "Developed and published a [[deep learning tool|https://academic.oup.com/bioinformatics/article/39/11/btad645/7325354]] for drug-resistance prediction in a high impact bioinformatics journal.",
@@ -47,7 +47,7 @@
     {
       "header": "CEMMPRE",
       "position": "Microbiology Research Intern",
-      "time": "Mar 2018 - Aug 2019",
+      "time": "March 2018 - August 2019",
       "place": "[[CEMMPRE - Environmental Microbiology Lab|https://www.uc.pt/cemmpre/]], Portugal",
       "description": [
         "Assisted in the design and construction of reactors for heavy metal bioaccumulation and bioleaching assays.",
