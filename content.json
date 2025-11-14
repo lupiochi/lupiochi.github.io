@@ -1,6 +1,16 @@
 {
   "experience": [
     {
+      "header": "Sciences Po",
+      "position": "Adjunct Professor",
+      "time": "Jan 2026 - present",
+      "place": "[[Sciences Po|https://www.sciencespo.fr/college/fr/vie-campus/campus/nancy/]], France",
+      "description": [
+        "Appointed to teach a course on Artificial Intelligence Fundamentals, Ethics and Governance (ID: CSPO 24A18), beginning January 2026.",
+        "Gave a talk as an invited speaker on Responsible AI usage at Sciences Po integration week for over 150 students in August 2025."
+      ]
+    },
+    {
       "header": "INRIA",
       "position": "PhD Student",
       "time": "September 2024 - present",
@@ -87,6 +97,12 @@
   ],
   "certifications": [
     {
+      "name": "Gitlab CI/CD Fundamentals I",
+      "organization": "Inria SED-NGE",
+      "date": "November 2025",
+      "link": "/assets/docs/GitlabCICD1.pdf"
+    },
+    {
       "name": "AWS Fundamentals",
       "organization": "Amazon Web Services",
       "date": "September 2025",
@@ -105,7 +121,7 @@
       "link": "https://www.coursera.org/account/accomplishments/specialization/RG92RKU4LDDB"
     },
     {
-      "name": "Understanding Docker Containers",
+      "name": "Introduction to Docker",
       "organization": "Inria SED-NGE",
       "date": "November 2024",
       "link": "/assets/docs/IntroToDocker_Piochi.pdf"
