@@ -97,6 +97,12 @@
   ],
   "certifications": [
     {
+      "name": "skrub like a pro",
+      "organization": "Inria Academy",
+      "date": "December 2025",
+      "link": "/assets/docs/Attestation_Skrub_251216_PIOCHI.pdf"
+    },
+    {
       "name": "Gitlab CI/CD Fundamentals I",
       "organization": "Inria SED-NGE",
       "date": "November 2025",
