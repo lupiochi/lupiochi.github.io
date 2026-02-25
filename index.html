@@ -1,324 +1,623 @@
 <!DOCTYPE HTML>
-
 <html lang="en">
-	<head>
-		<title>LF Piochi - Bioinformatics researcher</title>
-		<meta charset="utf-8" />
-		<meta name="description" content="Luiz Felipe Piochi's homepage.">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
-		<meta name="author" content="Luiz Felipe Piochi">
-		<meta property="og:title" content="LF Piochi - Deep Learning and Bioinformatics">
-		<meta property="og:description" content="Luiz Felipe Piochi's homepage.">
-		<link rel="icon" href="favicon.ico" type="image/x-icon" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Fixed Header -->
-		<div id="fixed-header">
-			<div class="container">
-				<span class="name">Luiz Piochi</span>
-				<ul class="icons">
-					<li><a href="https://github.com/lupiochi" target="_blank" class="icon brands fa-github alt" aria-label="GitHub"><span class="label">GitHub</span></a></li>
-					<li><a href="https://www.linkedin.com/in/luiz-piochi/" target="_blank" class="icon brands fa-linkedin alt" aria-label="LinkedIn"><span class="label">LinkedIn</span></a></li>
-					<li><a href="mailto:luizpiochi@outlook.com" target="_blank" class="icon solid fa-envelope alt" aria-label="Email"><span class="label">Email</span></a></li>
-				</ul>
-			</div>
-		</div>
+<head>
+  <title>LF Piochi</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Luiz Felipe Piochi — PhD Student in Computer Science at INRIA." />
+  <meta name="author" content="Luiz Felipe Piochi" />
+  <meta property="og:title" content="LF Piochi" />
+  <meta property="og:description" content="Luiz Felipe Piochi — PhD Student in Computer Science at INRIA." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    /* ─── Reset ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    /* ─── Tokens ─────────────────────────────────────────── */
+    :root {
+      --bg:        #111b1f;
+      --surface:   #192328;
+      --border:    rgba(255,255,255,0.09);
+      --text:      rgba(255,255,255,0.70);
+      --muted:     rgba(255,255,255,0.38);
+      --white:     #ffffff;
+      --accent:    #c89666;
+      --max:       720px;
+      --pad:       1.5rem;
+    }
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<div class="header-content">
-							<h1><span id="hiword"></span><br>
-								I'm <b>Luiz</b>.</h1>
-							<p>
-								I am a <b>PhD Student in Computer Science</b> at <b>INRIA</b>. <br>
-								I work with <strong>Artificial Intelligence</strong> applied to <strong>biological data</strong>.</p>
-							</p>
-						</div>
-						<div class="header-image">
-							<canvas id="infinite-illustration" oncontextmenu="return false;" draggable="false"></canvas>
-						</div>
+    /* ─── Base ────────────────────────────────────────────── */
+    html  { scroll-behavior: smooth; }
+    body  {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", system-ui, -apple-system, Helvetica, sans-serif;
+      font-size: 15.5px;
+      line-height: 1.75;
+    }
 
-					</header>
+    a            { color: var(--accent); text-decoration: none; transition: opacity 0.15s; }
+    a:hover      { opacity: 0.7; }
+    strong, b    { color: var(--white); font-weight: 600; }
+    p            { margin-bottom: 0.9em; }
+    p:last-child { margin-bottom: 0; }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#experience">Experience</a></li>
-							<li><a href="#education">Education</a></li>
-							<li><a href="#skills">Skills</a></li>
-							<li><a href="#publications">Publications</a></li>
-							<li><a href="#portfolio">Portfolio</a></li>
-							<li><a href="#certifications">Certifications</a></li>
-							<li><a href="#awards">Awards</a></li>
-						</ul>
-					</nav>
+    h1, h2, h3   { color: var(--white); font-weight: 400; letter-spacing: -0.02em; line-height: 1.3; }
 
-				<!-- Main -->
-					<div id="main">
+    /* Section label */
+    h2 {
+      font-size: 0.72em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
 
-						<!-- Introduction -->
-						<section id="intro" class="main">
-							<div class="spotlight">
-								<div class="content">
-									<header class="major">
-										<h2>About Me</h2>
-									</header>
-									<p>I'm a Computer Science PhD candidate at the National Institute for Research in Computer Science and Automation (INRIA). I really like using <strong>machine learning</strong> and <strong>deep learning</strong> to solve complex biological problems. Currently, I work mainly with the characterization of <strong>protein interactions</strong> and <strong>therapeutic protein design (from peptide binders to vaccines)</strong>.</p>
+    h3 { font-size: 0.97em; font-weight: 600; }
 
-									<p>I believe my background in both life sciences and computer science allows me to approach research questions from a unique perspective, even in problems that do not directly involve biological data. After all, understanding biochemistry is to understand complex systems, which mirrors the intricacies of computational models.</p>
-									
-								</div>
-							</div>
-						</section>
+    /* ─── Layout ──────────────────────────────────────────── */
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
 
-						<!-- Experience -->
-						<section id="experience" class="main special">
-							<header class="major">
-							  <h2>Experience</h2>
-							</header>
-							<div class="experience-container">
-							  <div class="accordion-items">
-								<!-- Dynamic content will be injected here -->
-							  </div>
-							  <div class="content-container"></div>
-							</div>
-						  </section>
+    section {
+      padding: 3.8rem 0;
+      border-top: 1px solid var(--border);
+    }
 
-						<!-- Education -->
-						<div id="education" class="section main special">
-							<div class="major">
-							  <h2>Education</h2>
-							</div>
-						  
-							<div class="education-list">
-							  <div class="education-item">
-								<div class="education-header">
-								  <h3>PhD in Computer Science @ <a href="https://www.inria.fr/en/inria-centre-universite-lorraine" target="_blank">INRIA & l'Université de Lorraine</a></h3>
-								  <span class="education-date">September 2024 - present</span>
-								</div>
-								<div class="education-content">
-									<p><strong>Thesis: </strong>"Learning host-pathogen surface interactome to design novel therapeutics."</p>
-								</div>
-							  </div>
+    /* ─── Nav ─────────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(17,27,31,0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
 
-							<div class="education-item">
-							<div class="education-header">
-								<h3>Summer School @ <a href="https://www.ox.ac.uk/" target="_blank">the University of Oxford</a></h3>
-								<span class="education-date">August 2025</span>
-							</div>
-							<div class="education-content">
-								<p>Intensive program organized by <a href="https://www.globalgoals.ai/" target="_blank">AI for Global Goals</a> on AI for Health & Biotech applications.</p>
-								<p><strong>Topics:</strong> Representation Learning, Geometric Deep Learning, LLMs, Causal ML</p>
-							</div>
-							</div>
-						  
-							  <div class="education-item">
-								<div class="education-header">
-								  <h3>MSc in Cell and Molecular Biology <a href="https://www.uc.pt/en/fctuc/dcv/master-programme/master-degree-in-cellular-and-molecular-biology/" target="_blank">@ University of Coimbra</a></h3>
-								  <span class="education-date">September 2020 - February 2023</span>
-								</div>
-								<div class="education-content">
-									<p><strong>Final grade: </strong>19/20 (GPA: 3.9)</p>
-									<p><strong>Thesis: </strong>"Multi-omics-based Drug Response Prediction of Cancer Cell Lines with DELFOS"</p>
-								</div>
-							  </div>
-						  
-							  <div class="education-item">
-								<div class="education-header">
-									<h3>BSc in Biochemistry <a href="https://www.uc.pt/en/fctuc/dcv/graduations/graduation-in-biochemistry/" target="_blank">@ University of Coimbra</a></h3>
-									<span class="education-date">September 2017 - June 2020</span>
-								</div>
-								<div class="education-content">
-									<p><strong>Final grade: </strong>17/20 (GPA: 3.6)</p>
-									<p><strong>Thesis: </strong>"Sestrin2 and Mitochondrial Quality Control in Myogenic Differentiation"</p>
-								</div>
-							  </div>
-						  
-							  <div class="education-item">
-								<div class="education-header">
-								  <h3><em>Technical Diploma (equivalent to Bac)</em> in Business Administration <a href="https://etecsp.cps.sp.gov.br/administracao/" target="_blank">@ ETEC</a></h3>
-								  <span class="education-date">February 2014 - December 2016</span>
-								</div>
-								<div class="education-content">
-								  <p><strong>* </strong> In Brazil, this type of degree exists alongside the "classical" undergraduate degree types. In Europe, it is equivalent to <a href="https://europass.europa.eu/en/description-eight-eqf-levels" class="highlight">EQF4 degrees</a></p>
-								  <p><strong>Thesis: </strong>"The Importance of HR within Companies: Teamwork and Divergences"</p>
-								</div>
-							  </div>
-							</div>
-						  </div>
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px;
+      gap: 1rem;
+    }
 
-						<!-- Skills -->
-						<section id="skills" class="main special">
-							<header class="major">
-								<h2>Skills</h2>
-							</header>
-							<div class="skills-content">
-								<div class="skill-category">
-									<h3><span class="icon solid fa-code"></span> Programming</h3>
-									<p><span class="highlight">Basic user:</span> JavaScript</p>
-									<p><span class="highlight">Experienced user:</span> Python, R, SQL</p>
-								</div>
-								<div class="skill-category">
-								<h3><span class="icon solid fa-book"></span> Frameworks & Tools</h3>
-								<p><span class="highlight">Numeric:</span> NumPy, pandas</p>
-								<p><span class="highlight">ML/DL:</span> PyTorch, Keras, scikit-learn, Hugging Face</p>
-								<p><span class="highlight">Workflow & MLOps:</span> Snakemake, MLflow, Weights & Biases, CI/CD</p>
-								<p><span class="highlight">Cloud & DevOps:</span> AWS, Docker, Git</p>
-								<p><span class="highlight">Bioinformatics:</span> Protein design, scRNA-seq, Metagenomics, Genomics</p>
-								</div>
-								<div class="skill-category">
-								<h3><span class="icon solid fa-language"></span> Languages</h3>
-								<p><span class="highlight">Native:</span> Portuguese</p>
-								<p><span class="highlight">High proficiency:</span> English (C2), Spanish (C1)</p>
-								<p><span class="highlight">Basic proficiency:</span> French (A2), German (A1)</p>
-								</div>
-								<!-- <div class="skill-category">
-									<h3><span class="icon solid fa-flask"></span> Life Sciences</h3>
-									<p><span class="highlight">Molecular biology:</span> in vitro cultures, western blotting, qPCR, transduction</p>
-									<p><span class="highlight">Microbiology:</span> bacterial cultures, screening and genotyping, cloning, environmental assays (bioaccumulation, bioleaching)</p>
-								</div> -->
-							</div>
-						</section>
+    nav .brand {
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.88em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
 
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.4rem;
+    }
 
-						<!-- Publications -->
-							<section id="publications" class="main special">
-								<header class="major">
-								<h2>Publications</h2>
-								</header>
-								<div class="publications-container">
-								<ul class="publications-list">
-									<!-- Dynamic content will be injected here -->
-								</ul>
-								</div>
-							</section>
+    nav ul li a {
+      color: var(--muted);
+      font-size: 0.82em;
+      letter-spacing: 0.03em;
+    }
 
-						<!-- Portfolio -->
-							<section id="portfolio" class="main special">
-								<header class="major">
-									<h2>Portfolio</h2>
-								</header>
-								<div class="portfolio-container">
-									<div class="portfolio-grid">
-										<div class="portfolio-item">
-											<div class="portfolio-image-container">
-												<img src="/assets/images/ppiris.png" alt="ppIRIS Image" class="portfolio-image">
-											</div>
-											<h3>ppIRIS</h3>
-											<p>LLM-based deep learning model for predicting protein-protein interactions.</p>
-											<a href="https://github.com/lupiochi/ppiris" class="button small">View Details</a>
-										</div>
-										<div class="portfolio-item">
-											<div class="portfolio-image-container">
-												<img src="/assets/images/gorgon.png" alt="GORGON Image" class="portfolio-image">
-											</div>
-											<h3>GORGON</h3>
-											<p>Developed a scalable and modular Snakemake pipeline for comprehensive microbial analysis, integrating tools like Kraken2 and Phyloseq for efficient processing and reporting.</p>
-											<a href="https://github.com/lupiochi/gorgon_smk" class="button small">View Details</a>
-										</div>
-										<div class="portfolio-item">
-											<div class="portfolio-image-container">
-												<img src="/assets/images/delfos.jpg" alt="DELFOS Image" class="portfolio-image">
-											</div>
-											<h3>DELFOS</h3>
-											<p>Developed a predictive algorithm leveraging multi-omics data to identify effective cancer drug responses, validated against unseen cell lines and drugs. Published <a href="https://doi.org/10.1093/bioinformatics/btad645" target="_blank">on OUP Bioinformatics</a>.</p>
-											<a href="https://github.com/MoreiraLAB/delfos" class="button small">View Details</a>
-										</div>
-										<!-- <div class="portfolio-item">
-											<div class="portfolio-image-container">
-												<img src="/assets/images/qwerty.jpg" alt="QWERTYQUEENS Image" class="portfolio-image">
-											</div>
-											<h3>QWERTYQueens</h3>
-											<p>My mother is a biologist and one of my biggest sources of inspiration. I built this <strong>very simple</strong> typing game celebrating women in STEM, providing educational content and links to Wikipedia pages for further learning.</p>
-											<a href="https://github.com/lupiochi/QWERTYQueens" class="button small">View Details</a>
-										</div> -->
-									</div>
-								</div>
-							</section>
-				
-						<!-- Certifications -->
-						<section id="certifications" class="main special">
-							<header class="major">
-							  <h2>Certifications</h2>
-							</header>
-							<div class="certifications-container">
-							  <!-- Dynamic content will be injected here -->
-							</div>
-						  </section>
-						  
+    nav ul li a:hover { color: var(--white); opacity: 1; }
 
-						<!-- Awards -->
-						<section id="awards" class="main special">
-							<header class="major">
-							  <h2>Awards</h2>
-							</header>
-							<div class="awards-container">
-							  <!-- Dynamic content will be injected here -->
-							</div>
-						  </section>
-						  
-					</div>
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2>Contact me</h2>
-							<p>Contact me through my <a href="mailto:luizpiochi@outlook.com">email</a> or any of my social media profiles.</p>
-							<ul class="icons">
-								<li><a href="https://github.com/lupiochi" target="_blank" class="icon brands fa-github alt" aria-label="Take a look at my GitHub"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/luiz-piochi/" target="_blank" class="icon brands fa-linkedin alt" aria-label="Take a look at my LinkedIn"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://www.researchgate.net/profile/Luiz-Piochi" target="_blank" class="icon brands fa-researchgate alt" aria-label="Take a look at my ResearchGate"><span class="label">ResearchGate</span></a></li>
-								<li><a href="https://scholar.google.com/citations?user=WYLujtYAAAAJ" target="_blank" class="icon brands fa fa-google alt" aria-label="Take a look at my GoogleScholar"><span class="label">Scholar</span></a></li>
-								<li><a href="mailto:luizpiochi@outlook.com" target="_blank" class="icon solid fa-envelope alt" aria-label="Send me an E-mail"><span class="label">E-mail</span></a></li>
-							</ul>
-						</section>
+    nav .social {
+      display: flex;
+      gap: 1rem;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
 
-						<p class="copyright">&copy; Built by Luiz Felipe Piochi.</p>
-					</footer>
+    nav .social a {
+      color: var(--muted);
+      font-size: 0.8em;
+    }
 
-			</div>
+    nav .social a:hover { color: var(--white); opacity: 1; }
 
-		<!-- Scripts -->
-			<script src="assets/js/fixbar.js"></script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/drawing.js"></script>
-			<script src="assets/js/hello.js"></script>
-			<script src="assets/js/accordion.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/injectContent.js"></script>
+    /* ─── Hero ────────────────────────────────────────────── */
+    #about {
+      padding: 5rem 0 4rem;
+      border-top: none;
+    }
 
+    #about h1 {
+      font-size: clamp(1.6rem, 4vw, 2.1rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
 
-		<!-- NoJavaScript -->
-			<noscript>
-				<input type="checkbox" id="close-popup" class="hidden-checkbox">
-				<div class="noscript-popup">
-				<div class="noscript-content">
-					<label for="close-popup" class="close-btn">×</label>
-					<h2>Hi!</h2>
-					<p>If you're seeing this, you probably have your browser's JavaScript deactivated. <br>
-						I'd really recommend activating JavaScript to check out my website.</p>
-					<h2>Why?</h2>
-					<p>Well, you can't really open any tabs without JavaScript, which will mainly affect my <strong>Experience</strong>, 
-						<strong>Education</strong>, and <strong>Skills</strong> sections (which are pretty important)</p>
-					<p>Please refer to these links based on your browser to enable JavaScript:</p>
-					<ul>
-					<li><a href="https://support.mozilla.org/en-US/kb/javascript-settings-for-interactive-web-pages" target="_blank">Firefox</a></li>
-					<li><a href="https://support.microsoft.com/en-us/help/4538994/microsoft-edge-turn-on-or-off-javascript" target="_blank">Edge</a></li>
-					<li><a href="https://support.google.com/adsense/answer/12654?hl=en" target="_blank">Chrome</a></li>
-					<li><a href="https://support.apple.com/guide/safari/enable-javascript-sfri11471/mac" target="_blank">Safari</a></li>
-					</ul>
-				</div>
-				</div>
-			</noscript>
-	</body>
+    #about .role {
+      font-size: 0.88em;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 0.9rem;
+    }
+
+    #about .email {
+      font-size: 0.85em;
+      color: var(--muted);
+      margin-bottom: 0.9rem;
+    }
+
+    #about .email a { color: var(--muted); }
+    #about .email a:hover { color: var(--accent); opacity: 1; }
+
+    #about .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    #about .links a {
+      font-size: 0.82em;
+      color: var(--accent);
+      border-bottom: 1px solid rgba(200,150,102,0.3);
+      padding-bottom: 1px;
+      transition: opacity 0.15s;
+    }
+
+    #about .links a:hover { opacity: 0.65; }
+
+    #about .bio {
+      margin-top: 2.8rem;
+      padding-top: 2.2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.95em;
+      line-height: 1.8;
+    }
+
+    #about .bio p { margin-bottom: 1em; }
+
+    /* ─── Experience ──────────────────────────────────────── */
+    .exp-list  { display: flex; flex-direction: column; gap: 2.2rem; }
+
+    .exp-meta  {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .exp-position { color: var(--white); font-weight: 600; font-size: 0.97em; }
+    .exp-time     { color: var(--muted); font-size: 0.78em; white-space: nowrap; }
+    .exp-place    { font-size: 0.85em; color: var(--muted); margin-bottom: 0.55rem; }
+
+    .exp-desc ul  { list-style: none; padding: 0; }
+
+    .exp-desc ul li {
+      font-size: 0.9em;
+      padding-left: 1.1em;
+      position: relative;
+      margin-bottom: 0.25rem;
+    }
+
+    .exp-desc ul li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* ─── Publications ────────────────────────────────────── */
+    .pub-list { display: flex; flex-direction: column; gap: 1.1rem; }
+
+    .pub-item {
+      padding-left: 1rem;
+      border-left: 2px solid var(--accent);
+    }
+
+    .pub-title   { color: var(--white); font-size: 0.92em; font-weight: 500; margin-bottom: 0.1rem; }
+    .pub-details { font-size: 0.79em; color: var(--muted); }
+
+    /* ─── Portfolio ───────────────────────────────────────── */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .portfolio-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.2rem 1.1rem;
+      transition: border-color 0.15s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .portfolio-card:hover { border-color: var(--accent); }
+
+    .portfolio-card h3   { margin-bottom: 0.45rem; }
+
+    .portfolio-card p    {
+      font-size: 0.86em;
+      color: var(--muted);
+      flex: 1;
+      margin-bottom: 1rem;
+    }
+
+    .portfolio-card .btn {
+      font-size: 0.79em;
+      color: var(--accent);
+      border-bottom: 1px solid rgba(200,150,102,0.28);
+      align-self: flex-start;
+    }
+
+    .portfolio-card .btn:hover { border-bottom-color: var(--accent); opacity: 1; }
+
+    /* ─── Footer ──────────────────────────────────────────── */
+    footer {
+      padding: 2.2rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    footer .copy   { font-size: 0.78em; color: var(--muted); }
+
+    footer .social { display: flex; gap: 1.2rem; }
+
+    footer .social a {
+      font-size: 0.82em;
+      color: var(--muted);
+    }
+
+    footer .social a:hover { color: var(--white); opacity: 1; }
+
+    /* ─── Avatar ────────────────────────────────────────────────── */
+    .about-hero {
+      display: flex;
+      align-items: flex-start;
+      gap: 2.8rem;
+    }
+
+    .avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 2px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .about-card { flex: 1; min-width: 0; padding-top: 0.3rem; }
+
+    /* Avatar protection: transparent overlay intercepts mouse/drag/contextmenu */
+    .avatar-wrap { position: relative; display: inline-block; border-radius: 50%; }
+    .avatar-protect {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: transparent;
+      cursor: default;
+      /* ensure overlay receives events */
+      pointer-events: auto;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    /* ─── Skills ─────────────────────────────────────────────────── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 1.4rem 2rem;
+    }
+
+    .skill-group-label {
+      font-size: 0.75em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--white);
+      margin-bottom: 0.45rem;
+    }
+
+    .skill-row {
+      font-size: 0.88em;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+
+    .skill-row .label {
+      color: var(--muted);
+      font-size: 0.85em;
+      display: block;
+      margin-bottom: 0.05rem;
+    }
+
+    /* ─── Awards ─────────────────────────────────────────────────── */
+    .award-list { display: flex; flex-direction: column; gap: 1rem; }
+
+    .award-item {
+      padding-left: 1rem;
+      border-left: 2px solid var(--border);
+      transition: border-color 0.15s;
+    }
+
+    .award-item:hover { border-left-color: var(--accent); }
+
+    .award-title {
+      color: var(--white);
+      font-size: 0.91em;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+
+    .award-desc { font-size: 0.84em; color: var(--muted); }
+
+    /* ─── Responsive ──────────────────────────────────────────── */
+    @media (max-width: 620px) {
+      nav ul            { display: none; }
+      nav .social       { display: none; }
+      #about            { padding: 3rem 0 2rem; }
+      .portfolio-grid   { grid-template-columns: 1fr; }
+      .about-hero       { flex-direction: column; gap: 1.4rem; }
+      .avatar           { width: 120px; height: 120px; }
+      .skills-grid      { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="container">
+      <span class="brand">Luiz Piochi</span>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#awards">Awards</a></li>
+      </ul>
+      <div class="social">
+        <a href="https://github.com/lupiochi" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/luiz-piochi/" target="_blank">LinkedIn</a>
+        <a href="mailto:luizpiochi@outlook.com">Email</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="about-hero">
+        <img src="assets/images/me.jpg" alt="Luiz Piochi" class="avatar" />
+        <div class="about-card">
+          <h1>Luiz Felipe Piochi</h1>
+          <p class="role">PhD Student in Computer Science @ <a href="https://www.inria.fr/en/inria-centre-universite-lorraine" target="_blank">INRIA</a> <br> Based in France</p>
+          <p class="email"> luizpiochi [at] outlook.com</a></p>
+          <div class="links">
+            <a href="https://scholar.google.com/citations?user=WYLujtYAAAAJ" target="_blank">[Scholar]</a>
+            <a href="https://github.com/lupiochi" target="_blank">[GitHub]</a>
+            <a href="https://www.linkedin.com/in/luiz-piochi/" target="_blank">[LinkedIn]</a>
+            <a href="https://www.researchgate.net/profile/Luiz-Piochi" target="_blank">[ResearchGate]</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bio">
+        <p>I am a PhD candidate (expected end in 2027) at <a href="https://www.inria.fr/en/inria-centre-universite-lorraine" target="_blank">INRIA</a>. I'm mainly interested in <strong>deep learning applied to biology</strong>, with a focus on protein biology and structure-guided therapeutic design.</p>
+
+        <p>I am also an adjunct professor at <a href="https://www.sciencespo.fr" target="_blank">Sciences Po</a>, teaching a course on AI Fundamentals, Ethics and Governance (since January 2026).</p>
+
+        <p>I graduated from the <a href="https://www.uc.pt" target="_blank">University of Coimbra</a> with a BSc in Biochemistry (2020) and an MSc in Cell and Molecular Biology (2023, grade 19/20). I also hold a technical diploma in Business Administration from <a href="https://etecsp.cps.sp.gov.br" target="_blank">ETEC</a>, São Paulo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="exp-list" id="exp-list">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications">
+    <div class="container">
+      <h2>Publications</h2>
+      <div class="pub-list" id="pub-list">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+
+        <div class="portfolio-card">
+          <h3>ppIRIS</h3>
+          <p>LLM-based deep learning model for predicting protein-protein interactions. Revealed 1,000+ novel interactions in bacterial pathogens.</p>
+          <a href="https://github.com/lupiochi/ppiris" target="_blank" class="btn">View on GitHub →</a>
+        </div>
+
+        <div class="portfolio-card">
+          <h3>GORGON</h3>
+          <p>Scalable Snakemake pipeline for comprehensive microbial analysis, integrating Kraken2 and Phyloseq for efficient processing and reporting.</p>
+          <a href="https://github.com/lupiochi/gorgon_smk" target="_blank" class="btn">View on GitHub →</a>
+        </div>
+
+        <div class="portfolio-card">
+          <h3>DELFOS</h3>
+          <p>Multi-omics predictive algorithm for cancer drug response prediction, validated against unseen cell lines. Published in OUP Bioinformatics.</p>
+          <a href="https://github.com/MoreiraLAB/delfos" target="_blank" class="btn">View on GitHub →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <div class="skill-group-label">Programming</div>
+          <div class="skill-row"><span class="label">Experienced</span>Python, R, SQL</div>
+          <div class="skill-row"><span class="label">Familiar</span>JavaScript</div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">ML / DL</div>
+          <div class="skill-row">PyTorch, Keras, scikit-learn, Hugging Face</div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Data & MLOps</div>
+          <div class="skill-row">NumPy, pandas, MLflow, Weights & Biases, Snakemake</div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Infra & DevOps</div>
+          <div class="skill-row">AWS, Docker, Git, CI/CD</div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Bioinformatics</div>
+          <div class="skill-row">Protein design, scRNA-seq, Metagenomics, Genomics</div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Languages</div>
+          <div class="skill-row"><span class="label">Native</span>Portuguese</div>
+          <div class="skill-row"><span class="label">High proficiency</span>English (C2), Spanish (C1)</div>
+          <div class="skill-row"><span class="label">Basic</span>French (A2), German (A1)</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section id="awards">
+    <div class="container">
+      <h2>Awards</h2>
+      <div class="award-list" id="award-list">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <span class="copy">© Luiz Felipe Piochi &nbsp;·&nbsp; <a href="index_old.html" style="color:var(--muted);font-size:inherit;">Click here to see the old version of my website</a></span>
+      <div class="social">
+        <a href="https://github.com/lupiochi" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/luiz-piochi/" target="_blank">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=WYLujtYAAAAJ" target="_blank">Scholar</a>
+        <a href="https://www.researchgate.net/profile/Luiz-Piochi" target="_blank">ResearchGate</a>
+        <a href="mailto:luizpiochi@outlook.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Parses [[label|url]] wiki-style links into anchor tags
+    function parseLinks(str) {
+      return str.replace(/\[\[([^\|]+)\|([^\]]+)\]\]/g, '<a href="$2" target="_blank">$1</a>');
+    }
+
+    fetch('content.json')
+      .then(r => r.json())
+      .then(data => {
+
+        /* ── Experience ── */
+        const expList = document.getElementById('exp-list');
+        data.experience.forEach(e => {
+          const place    = parseLinks(e.place);
+          const descHtml = e.description
+            .map(d => `<li>${parseLinks(d)}</li>`)
+            .join('');
+
+          expList.insertAdjacentHTML('beforeend', `
+            <div class="exp-item">
+              <div class="exp-meta">
+                <span class="exp-position">${e.position} &nbsp;·&nbsp; ${e.header}</span>
+                <span class="exp-time">${e.time}</span>
+              </div>
+              <div class="exp-place">${place}</div>
+              <div class="exp-desc"><ul>${descHtml}</ul></div>
+            </div>
+          `);
+        });
+
+        /* ── Publications ── */
+        const pubList = document.getElementById('pub-list');
+        data.publications.forEach(p => {
+          pubList.insertAdjacentHTML('beforeend', `
+            <div class="pub-item">
+              <div class="pub-title"><a href="${p.link}" target="_blank">${p.title}</a></div>
+              <div class="pub-details">${p.details}</div>
+            </div>
+          `);
+        });
+
+        /* ── Awards ── */
+        const awardList = document.getElementById('award-list');
+        data.awards.forEach(a => {
+          awardList.insertAdjacentHTML('beforeend', `
+            <div class="award-item">
+              <div class="award-title">${a.title}</div>
+              <div class="award-desc">${a.description}</div>
+            </div>
+          `);
+        });
+
+      })
+      .catch(() => {
+        // content.json unavailable (e.g. opened directly as file:// without a server)
+        document.getElementById('exp-list').innerHTML =
+          '<p style="color:var(--muted);font-size:.85em">Run from a local server to load dynamic content.</p>';
+      })
+      .finally(() => {
+        // Install lightweight protections to make saving the avatar via right-click/drag harder.
+        // Note: this reduces casual saving but cannot prevent determined users from retrieving the image.
+        const protect = document.querySelector('.avatar-protect');
+        const avatar = document.querySelector('.avatar');
+
+        function block(e) { e.stopPropagation(); e.preventDefault(); }
+
+        if (protect) {
+          protect.addEventListener('contextmenu', block);
+          protect.addEventListener('mousedown', block);
+          protect.addEventListener('dragstart', block);
+          protect.addEventListener('touchstart', block);
+        }
+
+        if (avatar) {
+          avatar.addEventListener('contextmenu', block);
+          avatar.addEventListener('dragstart', block);
+        }
+      });
+  </script>
+
+</body>
 </html>
