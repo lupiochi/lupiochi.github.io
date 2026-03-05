@@ -8,7 +8,7 @@
   <meta name="author" content="Luiz Felipe Piochi" />
   <meta property="og:title" content="LF Piochi" />
   <meta property="og:description" content="Luiz Felipe Piochi — PhD Student in Computer Science at INRIA." />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
   <style>
     /* ─── Reset ─────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -26,6 +26,17 @@
       --pad:       1.5rem;
     }
 
+    /* Light Mode Tokens */
+    [data-theme="light"] {
+      --bg:        #f4f7f8;
+      --surface:   #ffffff;
+      --border:    rgba(0,0,0,0.1);
+      --text:      #2c3e50;
+      --muted:     #7f8c8d;
+      --white:     #1a252f;
+      --accent:    #a67c52;
+    }
+
     /* ─── Base ────────────────────────────────────────────── */
     html  { scroll-behavior: smooth; }
     body  {
@@ -34,8 +45,10 @@
       font-family: "Segoe UI", system-ui, -apple-system, Helvetica, sans-serif;
       font-size: 15.5px;
       line-height: 1.75;
+      transition: background 0.3s, color 0.3s;
     }
-
+    
+    /* ... existing styles ... */
     a            { color: var(--accent); text-decoration: none; transition: opacity 0.15s; }
     a:hover      { opacity: 0.7; }
     strong, b    { color: var(--white); font-weight: 600; }
@@ -69,17 +82,18 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(17,27,31,0.88);
+      background: var(--bg);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
+      opacity: 0.95;
     }
 
     nav .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 50px;
+      height: 60px;
       gap: 1rem;
     }
 
@@ -105,19 +119,42 @@
 
     nav ul li a:hover { color: var(--white); opacity: 1; }
 
+    nav .actions {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      flex-shrink: 0;
+    }
+
     nav .social {
       display: flex;
-      gap: 1rem;
-      flex-shrink: 0;
-      white-space: nowrap;
+      gap: 1.1rem;
+      align-items: center;
     }
 
     nav .social a {
       color: var(--muted);
-      font-size: 0.8em;
+      font-size: 1.1em;
+      transition: color 0.2s;
     }
 
     nav .social a:hover { color: var(--white); opacity: 1; }
+
+    /* Theme Toggle Button */
+    #theme-toggle {
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 1.1em;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s;
+    }
+
+    #theme-toggle:hover { color: var(--white); }
 
     /* ─── Hero ────────────────────────────────────────────── */
     #about {
@@ -273,7 +310,7 @@
     footer .social { display: flex; gap: 1.2rem; }
 
     footer .social a {
-      font-size: 0.82em;
+      font-size: 1em;
       color: var(--muted);
     }
 
@@ -282,13 +319,15 @@
     /* ─── Avatar ────────────────────────────────────────────────── */
     .about-hero {
       display: flex;
-      align-items: flex-start;
-      gap: 2.8rem;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.8rem;
     }
 
     .avatar {
-      width: 160px;
-      height: 160px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
       object-position: center top;
@@ -296,7 +335,15 @@
       flex-shrink: 0;
     }
 
-    .about-card { flex: 1; min-width: 0; padding-top: 0.3rem; }
+    .about-card { flex: 1; min-width: 0; }
+
+    #about .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
 
     /* Avatar protection: transparent overlay intercepts mouse/drag/contextmenu */
     .avatar-wrap { position: relative; display: inline-block; border-radius: 50%; }
@@ -314,32 +361,30 @@
     }
 
     /* ─── Skills ─────────────────────────────────────────────────── */
-    .skills-grid {
+    .skills-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .skill-item {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-      gap: 1.4rem 2rem;
+      grid-template-columns: 140px 1fr;
+      gap: 1.5rem;
+      font-size: 0.92em;
+      line-height: 1.6;
     }
 
-    .skill-group-label {
-      font-size: 0.75em;
+    .skill-label {
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
       color: var(--white);
-      margin-bottom: 0.45rem;
+      text-align: right;
     }
 
-    .skill-row {
-      font-size: 0.88em;
+    .skill-content {
       color: var(--text);
-      margin-bottom: 0.2rem;
-    }
-
-    .skill-row .label {
-      color: var(--muted);
-      font-size: 0.85em;
-      display: block;
-      margin-bottom: 0.05rem;
     }
 
     /* ─── Awards ─────────────────────────────────────────────────── */
@@ -370,7 +415,9 @@
       .portfolio-grid   { grid-template-columns: 1fr; }
       .about-hero       { flex-direction: column; gap: 1.4rem; }
       .avatar           { width: 120px; height: 120px; }
-      .skills-grid      { grid-template-columns: 1fr 1fr; }
+      .skills-container { max-width: 100%; }
+      .skill-item       { grid-template-columns: 1fr; gap: 0.2rem; margin-bottom: 0.8rem; }
+      .skill-label      { text-align: left; }
     }
   </style>
 </head>
@@ -382,16 +429,16 @@
       <span class="brand">Luiz Piochi</span>
       <ul>
         <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#skills">Skills</a></li>
         <li><a href="#awards">Awards</a></li>
       </ul>
-      <div class="social">
-        <a href="https://github.com/lupiochi" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/luiz-piochi/" target="_blank">LinkedIn</a>
-        <a href="mailto:luizpiochi@outlook.com">Email</a>
+      <div class="actions">
+        <button id="theme-toggle" title="Toggle Light/Dark Mode">
+          <i class="fas fa-moon"></i>
+        </button>
       </div>
     </div>
   </nav>
@@ -400,10 +447,13 @@
   <section id="about">
     <div class="container">
       <div class="about-hero">
-        <img src="assets/images/me.jpg" alt="Luiz Piochi" class="avatar" />
+        <div class="avatar-wrap">
+          <img src="assets/images/me.jpg" alt="Luiz Piochi" class="avatar" />
+          <div class="avatar-protect"></div>
+        </div>
         <div class="about-card">
           <h1>Luiz Felipe Piochi</h1>
-          <p class="role">PhD Student in Computer Science @ <a href="https://www.inria.fr/en/inria-centre-universite-lorraine" target="_blank">INRIA</a> <br> Based in France</p>
+          <p class="role">PhD Student in Computer Science @ <a href="https://www.inria.fr/en/inria-centre-universite-lorraine" target="_blank">INRIA</a> <br> Adjunct Professor @ <a href="https://www.sciencespo.fr/fr/" target="_blank">Sciences Po</a> <br> Based in France </p>
           <p class="email"> luizpiochi [at] outlook.com</a></p>
           <div class="links">
             <a href="https://scholar.google.com/citations?user=WYLujtYAAAAJ" target="_blank">[Scholar]</a>
@@ -415,11 +465,46 @@
       </div>
 
       <div class="bio">
-        <p>I am a PhD candidate (expected end in 2027) at <a href="https://www.inria.fr/en/inria-centre-universite-lorraine" target="_blank">INRIA</a>. I'm mainly interested in <strong>deep learning applied to biology</strong>, with a focus on protein biology and structure-guided therapeutic design.</p>
+        <p>I am a PhD candidate (expected end in July 2027) at <a href="https://www.inria.fr/en/inria-centre-universite-lorraine" target="_blank">INRIA</a>. I'm mainly interested in <strong>deep learning applied to biology</strong>, with a focus on protein biology and structure-guided therapeutic design.</p>
 
         <p>I am also an adjunct professor at <a href="https://www.sciencespo.fr" target="_blank">Sciences Po</a>, teaching a course on AI Fundamentals, Ethics and Governance (since January 2026).</p>
 
         <p>I graduated from the <a href="https://www.uc.pt" target="_blank">University of Coimbra</a> with a BSc in Biochemistry (2020) and an MSc in Cell and Molecular Biology (2023, grade 19/20). I also hold a technical diploma in Business Administration from <a href="https://etecsp.cps.sp.gov.br" target="_blank">ETEC</a>, São Paulo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <h2 style="text-align: center;">Skills</h2>
+      <div class="skills-container">
+
+        <div class="skill-item">
+          <div class="skill-label">Bioinformatics</div>
+          <div class="skill-content">Protein Design, scRNA-seq, Metagenomics, Genomics</div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-label">Programming</div>
+          <div class="skill-content">Python (Advanced), R (Intermediate), SQL (Intermediate)</div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-label">ML / DL</div>
+          <div class="skill-content">PyTorch, Keras, scikit-learn, Hugging Face, Weights & Biases</div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-label">Soft Skills</div>
+          <div class="skill-content">Scientific Communication, Critical Thinking, Public Speaking</div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-label">Languages</div>
+          <div class="skill-content">Portuguese (Native), English (C2), Spanish (C1), French (A2), German (A1)</div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -472,49 +557,6 @@
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-
-        <div class="skill-group">
-          <div class="skill-group-label">Programming</div>
-          <div class="skill-row"><span class="label">Experienced</span>Python, R, SQL</div>
-          <div class="skill-row"><span class="label">Familiar</span>JavaScript</div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-group-label">ML / DL</div>
-          <div class="skill-row">PyTorch, Keras, scikit-learn, Hugging Face</div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-group-label">Data & MLOps</div>
-          <div class="skill-row">NumPy, pandas, MLflow, Weights & Biases, Snakemake</div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-group-label">Infra & DevOps</div>
-          <div class="skill-row">AWS, Docker, Git, CI/CD</div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-group-label">Bioinformatics</div>
-          <div class="skill-row">Protein design, scRNA-seq, Metagenomics, Genomics</div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-group-label">Languages</div>
-          <div class="skill-row"><span class="label">Native</span>Portuguese</div>
-          <div class="skill-row"><span class="label">High proficiency</span>English (C2), Spanish (C1)</div>
-          <div class="skill-row"><span class="label">Basic</span>French (A2), German (A1)</div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- Awards -->
   <section id="awards">
     <div class="container">
@@ -530,11 +572,10 @@
     <div class="container">
       <span class="copy">© Luiz Felipe Piochi &nbsp;·&nbsp; <a href="index_old.html" style="color:var(--muted);font-size:inherit;">Click here to see the old version of my website</a></span>
       <div class="social">
-        <a href="https://github.com/lupiochi" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/luiz-piochi/" target="_blank">LinkedIn</a>
-        <a href="https://scholar.google.com/citations?user=WYLujtYAAAAJ" target="_blank">Scholar</a>
-        <a href="https://www.researchgate.net/profile/Luiz-Piochi" target="_blank">ResearchGate</a>
-        <a href="mailto:luizpiochi@outlook.com">Email</a>
+        <a href="https://github.com/lupiochi" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/luiz-piochi/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://scholar.google.com/citations?user=WYLujtYAAAAJ" target="_blank" title="Scholar"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://www.researchgate.net/profile/Luiz-Piochi" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
       </div>
     </div>
   </footer>
@@ -544,6 +585,29 @@
     function parseLinks(str) {
       return str.replace(/\[\[([^\|]+)\|([^\]]+)\]\]/g, '<a href="$2" target="_blank">$1</a>');
     }
+
+    // Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const icon = themeToggle.querySelector('i');
+
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    if (currentTheme === 'light') {
+      body.setAttribute('data-theme', 'light');
+      icon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      if (body.getAttribute('data-theme') === 'light') {
+        body.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'dark');
+        icon.classList.replace('fa-sun', 'fa-moon');
+      } else {
+        body.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        icon.classList.replace('fa-moon', 'fa-sun');
+      }
+    });
 
     fetch('content.json')
       .then(r => r.json())
