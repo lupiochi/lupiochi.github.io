@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Astera Essay | Luiz Felipe Piochi</title>
+  <meta name="description" content="Astera essay PDF by Luiz Felipe Piochi.">
+  <style>
+    :root {
+      --bg: #f6f3eb;
+      --card: #fffdf8;
+      --text: #2b2418;
+      --muted: #6e6250;
+      --accent: #9f6b2f;
+      --border: #e5dac6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, #efe2cc 0%, transparent 38%),
+        radial-gradient(circle at 95% 95%, #f1dfbe 0%, transparent 30%),
+        var(--bg);
+      min-height: 100vh;
+    }
+
+    .page {
+      width: min(1100px, 96vw);
+      margin: 2rem auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 12px 32px rgba(43, 36, 24, 0.08);
+      overflow: hidden;
+    }
+
+    header {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .viewer {
+      width: 100%;
+      height: min(86vh, 1200px);
+      border: 0;
+      display: block;
+      background: #f0ece2;
+    }
+
+    .fallback {
+      margin: 0;
+      padding: 1rem 1.25rem 1.25rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .viewer {
+        height: 76vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>Astera Essay</h1>
+      <nav class="links" aria-label="Essay links">
+        <a href="../assets/docs/essay.pdf" target="_blank" rel="noopener">Open PDF in new tab</a>
+        <a href="../assets/docs/essay.pdf" download>Download PDF</a>
+      </nav>
+    </header>
+
+    <iframe class="viewer" src="../assets/docs/essay.pdf" title="Astera Essay PDF">
+      <p>Your browser cannot display PDFs. Use the links above to open or download the essay.</p>
+    </iframe>
+
+    <p class="fallback">If the PDF preview does not load, use "Open PDF in new tab" above.</p>
+  </main>
+</body>
+</html>
