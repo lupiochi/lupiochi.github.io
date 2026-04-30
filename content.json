@@ -8,7 +8,7 @@
       "description": [
         "Conducting research in generative deep learning for structure-guided protein design and therapeutic discovery,collaborating with international teams to scale AI models for biotech applications.",
         "Developed ppIRIS, a proteome-scale protein-protein interaction model that revealed 30+ experimentally validated interactions by Affinity Purification Mass Spectrometry.",
-        "Establishing novel strategies for combining evolutionary and structural data from proteins to target host-pathogen interactions, with applications in drug discovery and synthetic biology."
+        "Developed PROTEUS, "
       ]
     },
     {
@@ -17,7 +17,7 @@
       "time": "January 2026 - present",
       "place": "[[Sciences Po|https://www.sciencespo.fr/college/fr/vie-campus/campus/nancy/]], France",
       "description": [
-        "Teaching 'Artificial Intelligence: Fundamentals, Ethics and Governance' (ID: CSPO 24A18).",
+        "Teaching 'Artificial Intelligence: Fundamentals, Ethics and Governance' (ID: CSPO 24A18). Rating of 4.8/5 by students.",
         "Designed the course curriculum, including lectures on AI fundamentals, ethical frameworks, and governance models, and developed case studies on responsible AI in education.",
         "Invited and coordinated guest lectures with experts from UNESCO, INRIA, AlgorithmWatch, and other organizations."  
       ]
@@ -61,9 +61,19 @@
   ],
   "publications": [
     {
-      "title": "ppIRIS: deep learning for proteome-wide prediction of bacterial protein-protein interactions",
-      "details": "First author - 2025 | bioRxiv",
-      "link": "https://doi.org/10.1101/2025.09.22.677885"
+      "title": "Unraveling protein conformational plasticity with PROTEUS",
+      "details": "First author - 2026 | bioRxiv preprint",
+      "link": "https://doi.org/10.64898/2026.04.27.721098"
+    },
+    {
+      "title": "The GPCR Connection: Linking Alzheimer's Disease and Glioblastoma",
+      "details": "2026 | Journal of Cellular and Molecular Medicine",
+      "link": "https://doi.org/10.1111/jcmm.71131"
+    },
+    {
+      "title": "Rapid Proteome-Wide Discovery of Protein-Protein Interactions With ppIRIS",
+      "details": "First author - 2026 | Advanced Science",
+      "link": "https://doi.org/10.1002/advs.202521310"
     },
     {
       "title": "Shaping the uncharted: Revealing the protein structure space from the perspective of generative models",
@@ -97,6 +107,12 @@
     }
   ],
   "certifications": [
+    {
+      "name": "AI and Digital Transformation in Government",
+      "organization": "",
+      "date": "February 2026",
+      "link": "https://certify.sbs.ox.ac.uk/f5ef67fb-3776-4ba2-9cda-90450f13faec"
+    },
     {
       "name": "skrub like a pro",
       "organization": "Inria Academy",
@@ -212,7 +228,7 @@
       "description": "Awarded a highly competitive PhD Studentship by the Portuguese Foundation for Science and Technology, ranking among the top 10 recipients — declined in favour of pursuing research abroad."
     },
     {
-      "title": "Research Position at CNC",
+      "title": "Research Grant at CNC",
       "description": "Awarded a competitive research grant to work on bioinformatics projects at CNC (LCF/PR/HP20/52300003)."
     },
     {
