@@ -61,6 +61,11 @@
   ],
   "publications": [
     {
+      "title": "The Inference Gap: Test-Time Compute Scaling and the Limits of Training-Centric AI Governance",
+      "details": "Sole author, Poster - 2026 | ICML 2026 Workshop on Technical AI Governance Research (TAIGR)",
+      "link": "https://openreview.net/pdf?id=Vr5joujz4k"
+    },
+    {
       "title": "Unraveling protein conformational plasticity with PROTEUS",
       "details": "First author - 2026 | bioRxiv preprint",
       "link": "https://doi.org/10.64898/2026.04.27.721098"
