@@ -6,9 +6,7 @@
       "time": "September 2024 - present",
       "place": "[[Inria|https://www.inria.fr/fr/centre-inria-universite-lorraine]], France",
       "description": [
-        "Conducting research in generative deep learning for structure-guided protein design and therapeutic discovery,collaborating with international teams to scale AI models for biotech applications.",
-        "Developed ppIRIS, a proteome-scale protein-protein interaction model that revealed 30+ experimentally validated interactions by Affinity Purification Mass Spectrometry.",
-        "Developed PROTEUS, "
+        "Conducting research in generative deep learning for structure-guided protein design and therapeutic discovery,collaborating with international teams to scale AI models for biotech applications."
       ]
     },
     {
@@ -61,8 +59,18 @@
   ],
   "publications": [
     {
+      "title": "Credit Where Credit Is Due: A Taxonomy of AI Contributions to Scientific Discovery and Recommendations for Authorship Policy",
+      "details": "Sole author | Oral Presentation, ICML 2026 AI for Science Workshop",
+      "link": "https://openreview.net/forum?id=siD2eKSsYy"
+    },
+    {
+      "title": "Beyond Static Snapshots: A Large-Scale Dataset for Dynamics-Aware Protein-Nucleic Acid Modeling",
+      "details": "First author | Poster, ICML 2026 AI for Science Workshop",
+      "link": "https://openreview.net/forum?id=sfhppIXMTa"
+    },
+    {
       "title": "The Inference Gap: Test-Time Compute Scaling and the Limits of Training-Centric AI Governance",
-      "details": "Sole author, Poster - 2026 | ICML 2026 Workshop on Technical AI Governance Research (TAIGR)",
+      "details": "Sole author | Poster,  ICML 2026 Workshop on Technical AI Governance Research (TAIGR)",
       "link": "https://openreview.net/pdf?id=Vr5joujz4k"
     },
     {
