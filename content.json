@@ -225,6 +225,10 @@
   ],
   "awards": [
     {
+      "title": "ICML TAIGR Workshop Travel Award",
+      "description": "Selected among the top candidates for ICML 2026 TAIGR workshop travel assistance grant."
+    },    
+    {
       "title": "GENCI Grant for GPU Computing Resources",
       "description": "Awarded 25,000 GPU hours (approx. value €40k) on Jean Zay supercomputer for deep learning research in protein design and drug discovery."
     },
